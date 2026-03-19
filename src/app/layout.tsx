@@ -7,8 +7,8 @@ import { CalendarPattern } from "@/components/calendar-pattern";
 import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
-  title: "Agendou-manager",
-  description: "Gestão de agendamento para o salão de beleza Agendou",
+  title: "Paladar-manager",
+  description: "Gestão paladar",
   icons: {
     icon: "/icon.svg",
     shortcut: "/icon.svg",

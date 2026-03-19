@@ -202,14 +202,14 @@ function RegisterForm() {
     }
 
     const helpMessage = encodeURIComponent(
-      "Olá! Preciso de ajuda para ativar minha conta na agendou."
+      "Olá! Preciso de ajuda para ativar minha conta na paladar."
     );
 
     window.open(`https://wa.me/${whatsNumber}?text=${helpMessage}`, "_blank");
   };
 
   return (
-    <div className="min-h-screen bg-[#fff8eb] relative flex items-center justify-center p-4 md:p-8">
+    <div className="min-h-screen bg-[#f0fdf4] relative flex items-center justify-center p-4 md:p-8">
       <CalendarPattern variant="dense" opacity="opacity-10" />
       <div className="w-full max-w-2xl relative z-10">
         <div className="bg-white rounded-lg shadow-lg p-8">
@@ -222,7 +222,7 @@ function RegisterForm() {
               Cadastre seu Restaurante
             </h1>
             <p className="text-gray-600 text-sm">
-              Crie sua conta e comece a usar a agendou
+              Crie sua conta e comece a usar a paladar
             </p>
           </div>
 
@@ -502,7 +502,7 @@ function RegisterForm() {
               Enviamos um e-mail de confirmação para <strong>{registeredEmail}</strong>. Para ativar sua conta, confirme o e-mail antes de fazer login.
             </DialogDescription>
             <p className="text-sm text-muted-foreground">
-              Seja bem-vindo à agendou! Confirme seu e-mail para ativar sua conta e começar a usar todos os recursos.
+              Seja bem-vindo à paladar! Confirme seu e-mail para ativar sua conta e começar a usar todos os recursos.
             </p>
           </DialogHeader>
 

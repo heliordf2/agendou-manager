@@ -49,9 +49,9 @@ function UsuarioPageContent() {
   };
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top,#f8f4eb_0%,#eee2cc_100%)] p-4 md:p-8">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top,#f0fdf4_0%,#dcfce7_100%)] p-4 md:p-8">
       <div className="mx-auto max-w-md pt-20">
-        <Card className="border-[#ddcdb6] bg-white/95 shadow-[0_10px_26px_rgba(84,55,23,0.12)]">
+        <Card className="border-[#bbf7d0] bg-white/95 shadow-[0_10px_26px_rgba(22,163,74,0.12)]">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-[#3b2f2f]">
               <ShieldCheck className="h-5 w-5" />

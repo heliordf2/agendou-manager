@@ -4,9 +4,9 @@ import { Button } from "@/components/ui/button";
 
 export default function HomePage() {
   return (
-    <main className="min-h-screen bg-[radial-gradient(circle_at_top,#f8f4eb_0%,#eee2cc_100%)] px-6 py-16">
+    <main className="min-h-screen bg-[radial-gradient(circle_at_top,#f0fdf4_0%,#dcfce7_100%)] px-6 py-16">
       <section className="mx-auto max-w-2xl rounded-2xl border border-[#d8c8b0] bg-white/90 p-8 text-center shadow-[0_16px_40px_rgba(84,55,23,0.14)]">
-        <h1 className="text-3xl font-semibold text-[#2f2520]">Painel Administrativo - Agendou</h1>
+        <h1 className="text-3xl font-semibold text-[#2f2520]">Painel Administrativo - Paladar</h1>
         <p className="mt-2 text-sm text-[#6d5d51]">
           Acesse rapidamente as áreas principais da aplicação.
         </p>

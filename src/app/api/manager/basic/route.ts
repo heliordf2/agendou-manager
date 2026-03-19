@@ -4,12 +4,6 @@ import { NextRequest, NextResponse } from "next/server";
 import { db } from "@/lib/prisma";
 import { isThinkCookieValid, THINK_COOKIE_KEY } from "@/lib/think";
 
-type Plan = "STARTER" | "PRO" | "PLUS";
-
-function isValidPlan(value: unknown): value is Plan {
-  return value === "STARTER" || value === "PRO" || value === "PLUS";
-}
-
 export async function GET(request: NextRequest) {
   const thinkCookie = request.cookies.get(THINK_COOKIE_KEY)?.value;
   if (!isThinkCookieValid(thinkCookie)) {
@@ -24,7 +18,7 @@ export async function GET(request: NextRequest) {
       slug: true,
       phone: true,
       ativo: true,
-      plan: true,
+      plano: true,
       users: {
         orderBy: { createdAt: "asc" },
         take: 1,
@@ -54,7 +48,7 @@ export async function GET(request: NextRequest) {
       slug: comercio.slug,
       phone: comercio.phone,
       ativo: comercio.ativo,
-      plan: comercio.plan,
+      plano: comercio.plano,
     },
     user,
     comercios: comercios.map((item) => ({
@@ -62,7 +56,7 @@ export async function GET(request: NextRequest) {
       name: item.name,
       slug: item.slug,
       ativo: item.ativo,
-      plan: item.plan,
+      plano: item.plano,
     })),
   });
 }
@@ -81,7 +75,7 @@ export async function PATCH(request: NextRequest) {
         slug?: string;
         phone?: string;
         ativo?: boolean;
-        plan?: Plan;
+        plano?: string;
       };
       user?: {
         email?: string;
@@ -129,11 +123,8 @@ export async function PATCH(request: NextRequest) {
       if (typeof body.comercio.ativo === "boolean") {
         updateComercio.ativo = body.comercio.ativo;
       }
-      if (body.comercio.plan !== undefined) {
-        if (!isValidPlan(body.comercio.plan)) {
-          return NextResponse.json({ error: "Plano inválido" }, { status: 400 });
-        }
-        updateComercio.plan = body.comercio.plan;
+      if (typeof body.comercio.plano === "string" && body.comercio.plano.trim()) {
+        updateComercio.plano = body.comercio.plano.trim();
       }
     }
 

@@ -68,7 +68,7 @@ export async function POST(request: NextRequest) {
                   <!-- Header -->
                   <tr>
                     <td style="background: linear-gradient(135deg, #374151 0%, #4B5563 100%); padding: 40px 20px; text-align: center;">
-                      <h1 style="margin: 0; color: #ffffff; font-size: 28px;">agendou</h1>
+                      <h1 style="margin: 0; color: #ffffff; font-size: 28px;">paladar</h1>
                       <p style="margin: 10px 0 0 0; color: #ffffff; font-size: 16px;">Recuperação de Senha</p>
                     </td>
                   </tr>
@@ -113,7 +113,7 @@ export async function POST(request: NextRequest) {
                   <tr>
                     <td style="background-color: #f8f8f8; padding: 30px; text-align: center; border-top: 1px solid #eeeeee;">
                       <p style="margin: 0; color: #999999; font-size: 14px;">
-                        © ${new Date().getFullYear()} agendou. Todos os direitos reservados.
+                        © ${new Date().getFullYear()} paladar. Todos os direitos reservados.
                       </p>
                       <p style="margin: 10px 0 0 0; color: #999999; font-size: 12px;">
                         Transforme seu cardápio com IA
@@ -131,7 +131,7 @@ export async function POST(request: NextRequest) {
     console.log("[FORGOT-PASSWORD] Enviando email para:", email);
     await sendEmailUtil({
       to: email,
-      subject: "Recuperação de Senha - agendou",
+      subject: "Recuperação de Senha - paladar",
       html: emailHtml,
     });
     console.log("[FORGOT-PASSWORD] Email enviado com sucesso");

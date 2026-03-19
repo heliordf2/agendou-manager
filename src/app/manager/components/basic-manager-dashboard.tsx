@@ -9,8 +9,6 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
 
-type Plan = "STARTER" | "PRO" | "PLUS";
-
 type BasicPayload = {
   comercio: {
     id: string;
@@ -18,7 +16,7 @@ type BasicPayload = {
     slug: string;
     phone: string;
     ativo: boolean;
-    plan: Plan;
+    plano: string;
   };
   user: {
     id: string;
@@ -30,7 +28,7 @@ type BasicPayload = {
     name: string;
     slug: string;
     ativo: boolean;
-    plan: Plan;
+    plano: string;
   }>;
 };
 
@@ -39,7 +37,7 @@ const defaultForm = {
   slug: "",
   phone: "",
   ativo: false,
-  plan: "STARTER" as Plan,
+  plano: "Starter",
   email: "",
   emailVerified: false,
   newPassword: "",
@@ -91,7 +89,7 @@ export default function BasicManagerDashboard() {
         slug: payload.comercio.slug ?? "",
         phone: payload.comercio.phone ?? "",
         ativo: payload.comercio.ativo,
-        plan: payload.comercio.plan,
+        plano: payload.comercio.plano,
         email: payload.user?.email ?? "",
         emailVerified: payload.user?.emailVerified ?? false,
         newPassword: "",
@@ -147,7 +145,7 @@ export default function BasicManagerDashboard() {
             slug: form.slug,
             phone: form.phone,
             ativo: form.ativo,
-            plan: form.plan,
+            plano: form.plano,
           },
           user: selectedHasUser
             ? {
@@ -212,9 +210,9 @@ export default function BasicManagerDashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top,#f8f4eb_0%,#eee2cc_100%)] p-4 md:p-8">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top,#f0fdf4_0%,#dcfce7_100%)] p-4 md:p-8">
       <div className="mx-auto max-w-4xl space-y-6">
-        <Card className="border-[#ddcdb6] bg-white/90 shadow-[0_14px_42px_rgba(84,55,23,0.12)] backdrop-blur">
+        <Card className="border-[#bbf7d0] bg-white/90 shadow-[0_14px_42px_rgba(22,163,74,0.12)] backdrop-blur">
           <CardHeader>
             <div>
               <CardTitle className="flex items-center gap-2 text-[#3b2f2f]">
@@ -228,7 +226,7 @@ export default function BasicManagerDashboard() {
           </CardHeader>
         </Card>
 
-        <Card className="border-[#ddcdb6] bg-white/95 shadow-[0_10px_26px_rgba(84,55,23,0.08)]">
+        <Card className="border-[#bbf7d0] bg-white/95 shadow-[0_10px_26px_rgba(22,163,74,0.10)]">
           <CardHeader>
             <CardTitle className="text-base text-[#3b2f2f]">Estabelecimentos</CardTitle>
           </CardHeader>
@@ -246,17 +244,17 @@ export default function BasicManagerDashboard() {
               </div>
             </div>
 
-            <div className="overflow-x-auto rounded-lg border border-[#e5d7c3]">
-              <table className="min-w-full divide-y divide-[#e7dbc8] text-sm">
-                <thead className="bg-[#f8f1e7]">
+            <div className="overflow-x-auto rounded-lg border border-[#bbf7d0]">
+              <table className="min-w-full divide-y divide-[#dcfce7] text-sm">
+                <thead className="bg-[#ecfdf5]">
                   <tr>
-                    <th className="px-3 py-2 text-left font-semibold text-[#6b5642]">Nome</th>
-                    <th className="px-3 py-2 text-left font-semibold text-[#6b5642]">Plano</th>
-                    <th className="px-3 py-2 text-left font-semibold text-[#6b5642]">Status</th>
-                    <th className="px-3 py-2 text-right font-semibold text-[#6b5642]">Acoes</th>
+                    <th className="px-3 py-2 text-left font-semibold text-[#166534]">Nome</th>
+                    <th className="px-3 py-2 text-left font-semibold text-[#166534]">Plano</th>
+                    <th className="px-3 py-2 text-left font-semibold text-[#166534]">Status</th>
+                    <th className="px-3 py-2 text-right font-semibold text-[#166534]">Acoes</th>
                   </tr>
                 </thead>
-                <tbody className="divide-y divide-[#efe4d2] bg-white">
+                <tbody className="divide-y divide-[#dcfce7] bg-white">
                   {filteredComercios.length ? (
                     filteredComercios.map((comercio) => {
                       const isSelected = comercio.id === selectedComercioId;
@@ -265,10 +263,10 @@ export default function BasicManagerDashboard() {
                       return (
                         <tr
                           key={comercio.id}
-                          className={isSelected ? "bg-[#fff7eb]" : "hover:bg-[#fcf7ef]"}
+                          className={isSelected ? "bg-[#ecfdf5]" : "hover:bg-[#f0fdf4]"}
                         >
-                          <td className="px-3 py-2 font-medium text-[#3b2f2f]">{comercio.name}</td>
-                          <td className="px-3 py-2 text-[#6a5c52]">{comercio.plan}</td>
+                          <td className="px-3 py-2 font-medium text-[#14532d]">{comercio.name}</td>
+                          <td className="px-3 py-2 text-[#166534]">{comercio.plano}</td>
                           <td className="px-3 py-2">
                             <span
                               className={`inline-flex items-center rounded-full px-2 py-1 text-xs font-semibold ${
@@ -286,7 +284,7 @@ export default function BasicManagerDashboard() {
                                 variant="outline"
                                 size="sm"
                                 onClick={() => handleSelectComercio(comercio.id)}
-                                className="border-[#d7c7b1]"
+                                className="border-[#86efac]"
                               >
                                 <Pencil className="h-4 w-4" /> Editar
                               </Button>
@@ -316,7 +314,7 @@ export default function BasicManagerDashboard() {
                     })
                   ) : (
                     <tr>
-                      <td colSpan={4} className="px-3 py-6 text-center text-[#8f7a67]">
+                      <td colSpan={4} className="px-3 py-6 text-center text-[#166534]">
                         Nenhum estabelecimento encontrado para o filtro informado.
                       </td>
                     </tr>
@@ -327,7 +325,7 @@ export default function BasicManagerDashboard() {
           </CardContent>
         </Card>
 
-        <Card id="manager-edit-form" className="border-[#ddcdb6] bg-white/95 shadow-[0_10px_26px_rgba(84,55,23,0.08)]">
+        <Card id="manager-edit-form" className="border-[#bbf7d0] bg-white/95 shadow-[0_10px_26px_rgba(22,163,74,0.10)]">
           <CardHeader>
             <CardTitle className="text-base text-[#3b2f2f]">Dados principais</CardTitle>
           </CardHeader>
@@ -358,10 +356,10 @@ export default function BasicManagerDashboard() {
                 value={form.ativo ? "true" : "false"}
                 onValueChange={(value) => setForm((p) => ({ ...p, ativo: value === "true" }))}
               >
-                <SelectTrigger>
+                <SelectTrigger className="border-[#86efac] bg-[#f0fdf4]">
                   <SelectValue placeholder="Selecione" />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent className="border-[#86efac] bg-[#f0fdf4]">
                   <SelectItem value="true">true</SelectItem>
                   <SelectItem value="false">false</SelectItem>
                 </SelectContent>
@@ -369,20 +367,11 @@ export default function BasicManagerDashboard() {
             </div>
 
             <div className="space-y-1">
-              <p className="text-xs font-semibold uppercase tracking-wide text-[#8f7a67]">Plan</p>
-              <Select
-                value={form.plan}
-                onValueChange={(value: Plan) => setForm((p) => ({ ...p, plan: value }))}
-              >
-                <SelectTrigger>
-                  <SelectValue placeholder="Selecione" />
-                </SelectTrigger>
-                <SelectContent>
-                  <SelectItem value="STARTER">STARTER</SelectItem>
-                  <SelectItem value="PRO">PRO</SelectItem>
-                  <SelectItem value="PLUS">PLUS</SelectItem>
-                </SelectContent>
-              </Select>
+              <p className="text-xs font-semibold uppercase tracking-wide text-[#8f7a67]">Plano</p>
+              <Input
+                value={form.plano}
+                onChange={(e) => setForm((p) => ({ ...p, plano: e.target.value }))}
+              />
             </div>
 
             <div className="space-y-1 sm:col-span-2">
@@ -404,10 +393,10 @@ export default function BasicManagerDashboard() {
                 }
                 disabled={!selectedHasUser}
               >
-                <SelectTrigger>
+                <SelectTrigger className="border-[#86efac] bg-[#f0fdf4]">
                   <SelectValue placeholder="Selecione" />
                 </SelectTrigger>
-                <SelectContent>
+                <SelectContent className="border-[#86efac] bg-[#f0fdf4]">
                   <SelectItem value="true">true</SelectItem>
                   <SelectItem value="false">false</SelectItem>
                 </SelectContent>
@@ -416,7 +405,7 @@ export default function BasicManagerDashboard() {
           </CardContent>
         </Card>
 
-        <Card className="border-[#ddcdb6] bg-white/95 shadow-[0_10px_26px_rgba(84,55,23,0.08)]">
+        <Card className="border-[#bbf7d0] bg-white/95 shadow-[0_10px_26px_rgba(22,163,74,0.10)]">
           <CardHeader>
             <CardTitle className="flex items-center gap-2 text-base text-[#3b2f2f]">
               <Lock className="h-4 w-4" />

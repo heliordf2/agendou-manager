@@ -476,42 +476,24 @@ export async function getDeleteImpact(
   const [
     menuCategory,
     product,
-    profissional,
     order,
     user,
-    businessHours,
-    agendaProfissional,
-    profissionalProduct,
-    bloqueoProfissional,
     orderProduct,
-    blockedTimeSlot,
   ] = await Promise.all([
     db.menuCategory.count({ where: { comercioId } }),
     db.product.count({ where: { comercioId } }),
-    db.profissional.count({ where: { comercioId } }),
     db.order.count({ where: { comercioId } }),
     db.user.count({ where: { comercioId } }),
-    db.businessHours.count({ where: { comercioId } }),
-    db.agendaProfissional.count({ where: { profissional: { comercioId } } }),
-    db.profissionalProduct.count({ where: { profissional: { comercioId } } }),
-    db.bloqueoProfissional.count({ where: { agenda: { profissional: { comercioId } } } }),
     db.orderProduct.count({ where: { order: { comercioId } } }),
-    db.blockedTimeSlot.count({ where: { businessHours: { comercioId } } }),
   ]);
 
   const counts: Record<string, number> = {
     Comercio: 1,
     MenuCategory: menuCategory,
     Product: product,
-    Profissional: profissional,
     Order: order,
     User: user,
-    BusinessHours: businessHours,
-    AgendaProfissional: agendaProfissional,
-    ProfissionalProduct: profissionalProduct,
-    BloqueoProfissional: bloqueoProfissional,
     OrderProduct: orderProduct,
-    BlockedTimeSlot: blockedTimeSlot,
   };
 
   const details = Object.entries(counts)

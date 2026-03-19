@@ -110,7 +110,7 @@ function ResetPasswordContent() {
 
   if (isValidating) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-[#fff8eb]">
+      <div className="min-h-screen flex items-center justify-center bg-[#f0fdf4]">
         <div className="flex flex-col items-center gap-4">
           <Loader2 className="w-8 h-8 animate-spin text-[#374151]" />
           <p className="text-gray-600">Validando token...</p>
@@ -121,7 +121,7 @@ function ResetPasswordContent() {
 
   if (!isValidToken) {
     return (
-      <div className="min-h-screen flex items-center justify-center bg-[#fff8eb] p-4">
+      <div className="min-h-screen flex items-center justify-center bg-[#f0fdf4] p-4">
         <div className="w-full max-w-md bg-white rounded-2xl shadow-2xl p-8 text-center">
           <div className="w-16 h-16 rounded-full bg-red-100 flex items-center justify-center mx-auto mb-4">
             <Calendar className="w-8 h-8 text-red-600" />
@@ -142,7 +142,7 @@ function ResetPasswordContent() {
   }
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#fff8eb] relative p-4">
+    <div className="min-h-screen flex items-center justify-center bg-[#f0fdf4] relative p-4">
       <CalendarPattern variant="dense" opacity="opacity-10" />
       <div className="w-full max-w-md relative z-10">
         <div className="bg-white rounded-2xl shadow-2xl p-8">

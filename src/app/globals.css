@@ -6,7 +6,7 @@
 
 @layer components {
   .background-page {
-    @apply bg-[#fff8eb];
+    @apply bg-[#f0fdf4];
   }
 
   .cor-primaria {

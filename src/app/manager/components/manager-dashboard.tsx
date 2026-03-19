@@ -643,9 +643,9 @@ export default function ManagerDashboard({
   };
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top,#fff6e7_0%,#f4ecde_40%,#efe3d0_100%)] p-4 md:p-8">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top,#f0fdf4_0%,#dcfce7_100%)] p-4 md:p-8">
       <div className="mx-auto max-w-[1500px] space-y-6">
-        <Card className="border-[#ddcdb6] bg-white/85 shadow-[0_14px_42px_rgba(84,55,23,0.12)] backdrop-blur">
+        <Card className="border-[#bbf7d0] bg-white/85 shadow-[0_14px_42px_rgba(22,163,74,0.12)] backdrop-blur">
           <CardHeader className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div>
               <CardTitle className="flex items-center gap-2 text-[#3b2f2f]">
@@ -677,7 +677,7 @@ export default function ManagerDashboard({
           </CardHeader>
         </Card>
 
-        <Card className="border-[#ddcdb6] bg-gradient-to-br from-white to-[#f9f3e9] shadow-[0_10px_30px_rgba(84,55,23,0.10)]">
+        <Card className="border-[#bbf7d0] bg-gradient-to-br from-white to-[#f0fdf4] shadow-[0_10px_30px_rgba(22,163,74,0.12)]">
           <CardHeader className="space-y-3">
             <CardTitle className="text-base text-[#3b2f2f]">Ações e Backups</CardTitle>
             <p className="text-sm text-[#6f5f52]">
@@ -693,10 +693,10 @@ export default function ManagerDashboard({
                     setOffset(0);
                   }}
                 >
-                  <SelectTrigger className="h-10">
+                  <SelectTrigger className="h-10 border-[#86efac] bg-[#f0fdf4]">
                     <SelectValue placeholder="Selecione uma tabela" />
                   </SelectTrigger>
-                  <SelectContent>
+                  <SelectContent className="border-[#86efac] bg-[#f0fdf4]">
                     {models.map((model) => (
                       <SelectItem key={model.name} value={model.name}>
                         {model.name}
@@ -739,7 +739,7 @@ export default function ManagerDashboard({
           </CardHeader>
         </Card>
 
-        <Card className="border-[#ddcdb6] bg-white/95 shadow-[0_10px_26px_rgba(84,55,23,0.08)]">
+        <Card className="border-[#bbf7d0] bg-white/95 shadow-[0_10px_26px_rgba(22,163,74,0.10)]">
           <CardHeader>
             <div className="flex flex-col gap-2 sm:flex-row sm:items-center sm:justify-between">
               <CardTitle className="text-base text-[#3b2f2f]">
@@ -760,9 +760,9 @@ export default function ManagerDashboard({
             </p>
           </CardHeader>
           <CardContent>
-            <div className="overflow-x-auto rounded-xl border border-[#e5d6c3] bg-white">
+            <div className="overflow-x-auto rounded-xl border border-[#bbf7d0] bg-white">
               <table className="min-w-full text-sm">
-                <thead className="bg-[#efe1ce] text-left text-[#4f3f33]">
+                <thead className="bg-[#ecfdf5] text-left text-[#166534]">
                   <tr>
                     {tableFields.map((field) => (
                       <th key={field.name} className="px-3 py-2.5 font-semibold">
@@ -775,13 +775,13 @@ export default function ManagerDashboard({
                 <tbody>
                   {loading ? (
                     <tr>
-                      <td className="px-3 py-6 text-center text-[#6a5c52]" colSpan={tableFields.length + 1}>
+                      <td className="px-3 py-6 text-center text-[#166534]" colSpan={tableFields.length + 1}>
                         Carregando registros...
                       </td>
                     </tr>
                   ) : records.length === 0 ? (
                     <tr>
-                      <td className="px-3 py-6 text-center text-[#6a5c52]" colSpan={tableFields.length + 1}>
+                      <td className="px-3 py-6 text-center text-[#166534]" colSpan={tableFields.length + 1}>
                         Sem registros para exibir.
                       </td>
                     </tr>
@@ -789,12 +789,12 @@ export default function ManagerDashboard({
                     records.map((record, index) => (
                       <tr
                         key={index}
-                        className="border-t border-[#f0e7db] align-top transition-colors hover:bg-[#fff8ef]"
+                        className="border-t border-[#dcfce7] align-top transition-colors hover:bg-[#f0fdf4]"
                       >
                         {tableFields.map((field) => {
                           const value = record[field.name];
                           return (
-                            <td key={field.name} className="max-w-[260px] px-3 py-2 text-[#2f2a25]">
+                            <td key={field.name} className="max-w-[260px] px-3 py-2 text-[#14532d]">
                               {shouldRenderImage(field.name, value) ? (
                                 <ImageThumbnail src={value} alt={field.name} className="h-12 w-12" />
                               ) : (
@@ -827,7 +827,7 @@ export default function ManagerDashboard({
               <Button variant="outline" className="w-full sm:w-auto" disabled={currentPage <= 1} onClick={() => goToPage(currentPage - 1)}>
                 Anterior
               </Button>
-              <p className="text-center text-sm text-[#6a5c52]">Mostrando {Math.min(PAGE_SIZE, records.length)} por página</p>
+              <p className="text-center text-sm text-[#166534]">Mostrando {Math.min(PAGE_SIZE, records.length)} por página</p>
               <Button
                 variant="outline"
                 className="w-full sm:w-auto"
@@ -895,10 +895,10 @@ export default function ManagerDashboard({
                       setFormData((prev) => ({ ...prev, [field.name]: value }))
                     }
                   >
-                    <SelectTrigger>
+                    <SelectTrigger className="border-[#86efac] bg-[#f0fdf4]">
                       <SelectValue placeholder="Selecione" />
                     </SelectTrigger>
-                    <SelectContent>
+                    <SelectContent className="border-[#86efac] bg-[#f0fdf4]">
                       <SelectItem value="true">Ativo (true)</SelectItem>
                       <SelectItem value="false">Inativo (false)</SelectItem>
                     </SelectContent>
@@ -963,10 +963,10 @@ export default function ManagerDashboard({
                       setCreateData((prev) => ({ ...prev, [field.name]: value }))
                     }
                   >
-                    <SelectTrigger>
+                    <SelectTrigger className="border-[#86efac] bg-[#f0fdf4]">
                       <SelectValue placeholder="Selecione" />
                     </SelectTrigger>
-                    <SelectContent>
+                    <SelectContent className="border-[#86efac] bg-[#f0fdf4]">
                       <SelectItem value="true">Ativo (true)</SelectItem>
                       <SelectItem value="false">Inativo (false)</SelectItem>
                     </SelectContent>

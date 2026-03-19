@@ -72,8 +72,8 @@ function ImageThumbnail({ src, alt }: { src: string; alt: string }) {
 
   if (hasError) {
     return (
-      <div className="flex h-28 w-full items-center justify-center rounded-xl border border-dashed border-[#d7c7b1] bg-[#f7f0e6]">
-        <ImageOff className="h-5 w-5 text-[#8a7358]" />
+      <div className="flex h-28 w-full items-center justify-center rounded-xl border border-dashed border-[#86efac] bg-[#f0fdf4]">
+        <ImageOff className="h-5 w-5 text-[#166534]" />
       </div>
     );
   }
@@ -83,7 +83,7 @@ function ImageThumbnail({ src, alt }: { src: string; alt: string }) {
       href={src}
       target="_blank"
       rel="noreferrer"
-      className="group relative block h-28 w-full overflow-hidden rounded-xl border border-[#d7c7b1] bg-[#f7f0e6]"
+      className="group relative block h-28 w-full overflow-hidden rounded-xl border border-[#86efac] bg-[#f0fdf4]"
       title="Abrir imagem"
     >
       <img
@@ -256,16 +256,16 @@ export default function StorageDashboard() {
   };
 
   return (
-    <div className="min-h-screen bg-[radial-gradient(circle_at_top,#fff6e7_0%,#f4ecde_40%,#efe3d0_100%)] p-4 md:p-8">
+    <div className="min-h-screen bg-[radial-gradient(circle_at_top,#f0fdf4_0%,#dcfce7_100%)] p-4 md:p-8">
       <div className="mx-auto max-w-[1500px] space-y-6">
-        <Card className="border-[#ddcdb6] bg-white/90 shadow-[0_14px_42px_rgba(84,55,23,0.12)] backdrop-blur">
+        <Card className="border-[#bbf7d0] bg-white/90 shadow-[0_14px_42px_rgba(22,163,74,0.12)] backdrop-blur">
           <CardHeader className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
             <div>
               <CardTitle className="flex items-center gap-2 text-[#3b2f2f]">
                 <Files className="h-5 w-5" />
-                Storage - Agendou
+                Storage - Paladar
               </CardTitle>
-              <p className="mt-1 text-sm text-[#6a5c52]">
+              <p className="mt-1 text-sm text-[#166534]">
                 Olá, Administrador. Visualize arquivos, valide no banco e
                 gerencie o storage.
               </p>
@@ -282,18 +282,18 @@ export default function StorageDashboard() {
           </CardHeader>
         </Card>
 
-        <Card className="border-[#ddcdb6] bg-white/95 shadow-[0_10px_26px_rgba(84,55,23,0.08)]">
+        <Card className="border-[#bbf7d0] bg-white/95 shadow-[0_10px_26px_rgba(22,163,74,0.10)]">
           <CardHeader>
             <CardTitle className="text-base text-[#3b2f2f]">
               Arquivos de imagem
             </CardTitle>
             <div className="grid gap-3 lg:grid-cols-[minmax(0,1fr)_minmax(320px,420px)]">
               <div className="space-y-1">
-                <p className="text-[11px] font-semibold uppercase tracking-wide text-[#8f7a67]">
+                <p className="text-[11px] font-semibold uppercase tracking-wide text-[#166534]">
                   Buscar
                 </p>
                 <div className="relative lg:max-w-2xl">
-                  <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-[#8f7a67]" />
+                  <Search className="pointer-events-none absolute left-3.5 top-1/2 h-4 w-4 -translate-y-1/2 text-[#166534]" />
                   <Input
                     value={query}
                     onChange={(event) => setQuery(event.target.value)}
@@ -304,7 +304,7 @@ export default function StorageDashboard() {
               </div>
               <div className="grid grid-cols-1 gap-2 sm:grid-cols-2">
                 <div className="space-y-1">
-                  <p className="text-[11px] font-semibold uppercase tracking-wide text-[#8f7a67]">
+                  <p className="text-[11px] font-semibold uppercase tracking-wide text-[#166534]">
                     Filtro
                   </p>
                   <Select
@@ -313,10 +313,10 @@ export default function StorageDashboard() {
                       setDbFilter(value)
                     }
                   >
-                    <SelectTrigger className="h-10 text-xs sm:text-sm">
+                    <SelectTrigger className="h-10 border-[#86efac] bg-[#f0fdf4] text-xs sm:text-sm">
                       <SelectValue placeholder="Filtro banco" />
                     </SelectTrigger>
-                    <SelectContent>
+                    <SelectContent className="border-[#86efac] bg-[#f0fdf4]">
                       <SelectItem value="all">Todos</SelectItem>
                       <SelectItem value="true">Somente true</SelectItem>
                       <SelectItem value="false">Somente false</SelectItem>
@@ -324,7 +324,7 @@ export default function StorageDashboard() {
                   </Select>
                 </div>
                 <div className="space-y-1">
-                  <p className="text-[11px] font-semibold uppercase tracking-wide text-[#8f7a67]">
+                  <p className="text-[11px] font-semibold uppercase tracking-wide text-[#166534]">
                     Ordenar
                   </p>
                   <div className="flex gap-2">
@@ -340,10 +340,10 @@ export default function StorageDashboard() {
                         }
                       }}
                     >
-                      <SelectTrigger className="h-10 min-w-0 flex-1 text-xs sm:text-sm">
+                      <SelectTrigger className="h-10 min-w-0 flex-1 border-[#86efac] bg-[#f0fdf4] text-xs sm:text-sm">
                         <SelectValue placeholder="Ordenar por" />
                       </SelectTrigger>
-                      <SelectContent>
+                      <SelectContent className="border-[#86efac] bg-[#f0fdf4]">
                         <SelectItem value="name">Nome</SelectItem>
                         <SelectItem value="size">Tamanho</SelectItem>
                         <SelectItem value="existsInDatabase">
@@ -372,7 +372,7 @@ export default function StorageDashboard() {
                 </div>
               </div>
             </div>
-            <p className="text-sm text-[#6a5c52]">
+            <p className="text-sm text-[#166534]">
               Total: {filteredFiles.length} arquivo(s). Campo{" "}
               <strong>Existe no banco</strong>: true/false.
             </p>
@@ -397,11 +397,11 @@ export default function StorageDashboard() {
           </CardHeader>
           <CardContent>
             {loading ? (
-              <div className="rounded-xl border border-[#e5d6c3] bg-white p-6 text-center text-[#6a5c52]">
+              <div className="rounded-xl border border-[#bbf7d0] bg-white p-6 text-center text-[#166534]">
                 Carregando imagens...
               </div>
             ) : filteredFiles.length === 0 ? (
-              <div className="rounded-xl border border-[#e5d6c3] bg-white p-6 text-center text-[#6a5c52]">
+              <div className="rounded-xl border border-[#bbf7d0] bg-white p-6 text-center text-[#166534]">
                 Nenhuma imagem encontrada.
               </div>
             ) : viewMode === "grid" ? (
@@ -409,24 +409,24 @@ export default function StorageDashboard() {
                 {filteredFiles.map((file) => (
                   <div
                     key={file.fileKey}
-                    className="rounded-2xl border border-[#e5d6c3] bg-white p-3 shadow-[0_8px_20px_rgba(84,55,23,0.06)] transition-transform duration-200 hover:-translate-y-0.5"
+                    className="rounded-2xl border border-[#bbf7d0] bg-white p-3 shadow-[0_8px_20px_rgba(22,163,74,0.08)] transition-transform duration-200 hover:-translate-y-0.5"
                   >
                     <ImageThumbnail src={file.url} alt={file.name} />
                     <div className="mt-3 space-y-1.5">
                       <p
-                        className="truncate text-sm font-semibold text-[#3b2f2f]"
+                        className="truncate text-sm font-semibold text-[#14532d]"
                         title={file.name}
                       >
                         {file.name}
                       </p>
-                      <p className="text-xs text-[#7a6756]">
+                      <p className="text-xs text-[#166534]">
                         Tamanho: {formatBytes(file.size)}
                       </p>
-                      <p className="text-xs text-[#7a6756]">
+                      <p className="text-xs text-[#166534]">
                         Upload:{" "}
                         {new Date(file.uploadedAt).toLocaleString("pt-BR")}
                       </p>
-                      <p className="text-xs text-[#7a6756]">
+                      <p className="text-xs text-[#166534]">
                         Existe no banco:{" "}
                         <span
                           className={
@@ -487,7 +487,7 @@ export default function StorageDashboard() {
                 {filteredFiles.map((file) => (
                   <div
                     key={file.fileKey}
-                    className="grid grid-cols-[72px_minmax(0,1fr)] gap-3 rounded-xl border border-[#e5d6c3] bg-white p-2 sm:grid-cols-[96px_minmax(0,1fr)_220px]"
+                    className="grid grid-cols-[72px_minmax(0,1fr)] gap-3 rounded-xl border border-[#bbf7d0] bg-white p-2 sm:grid-cols-[96px_minmax(0,1fr)_220px]"
                   >
                     <div className="h-[72px] w-[72px] sm:h-[96px] sm:w-[96px]">
                       <ImageThumbnail src={file.url} alt={file.name} />
@@ -495,19 +495,19 @@ export default function StorageDashboard() {
 
                     <div className="min-w-0 space-y-1">
                       <p
-                        className="truncate text-sm font-semibold text-[#3b2f2f]"
+                        className="truncate text-sm font-semibold text-[#14532d]"
                         title={file.name}
                       >
                         {file.name}
                       </p>
-                      <p className="text-xs text-[#7a6756]">
+                      <p className="text-xs text-[#166534]">
                         Tamanho: {formatBytes(file.size)}
                       </p>
-                      <p className="text-xs text-[#7a6756]">
+                      <p className="text-xs text-[#166534]">
                         Upload:{" "}
                         {new Date(file.uploadedAt).toLocaleString("pt-BR")}
                       </p>
-                      <p className="text-xs text-[#7a6756]">
+                      <p className="text-xs text-[#166534]">
                         Existe no banco:{" "}
                         <span
                           className={
@@ -581,7 +581,7 @@ export default function StorageDashboard() {
             </DialogDescription>
           </DialogHeader>
           <div className="space-y-2">
-            <p className="text-sm text-[#6a5c52]">
+            <p className="text-sm text-[#166534]">
               Nome atual: {editingFile?.name}
             </p>
             <Input

@@ -1,7 +1,7 @@
 "use client";
 
 import { zodResolver } from "@hookform/resolvers/zod";
-import { Calendar, Loader2 } from "lucide-react";
+import { ChefHat, Loader2 } from "lucide-react";
 import Link from "next/link";
 import { useState } from "react";
 import { useForm } from "react-hook-form";
@@ -68,14 +68,14 @@ export default function ForgotPasswordPage() {
   };
 
   return (
-    <div className="min-h-screen flex items-center justify-center bg-[#fff8eb] relative p-4">
+    <div className="min-h-screen flex items-center justify-center bg-[#f0fdf4] relative p-4">
       <CalendarPattern variant="dense" opacity="opacity-10" />
       <div className="w-full max-w-md relative z-10">
         <div className="bg-white rounded-2xl shadow-2xl p-8">
           {/* Logo */}
           <div className="flex flex-col items-center mb-8">
-            <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#374151] to-[#4B5563] flex items-center justify-center mb-4">
-              <Calendar className="w-8 h-8 text-white" />
+            <div className="w-16 h-16 rounded-full bg-gradient-to-br from-[#4ade80] to-[#16a34a] flex items-center justify-center mb-4">
+              <ChefHat className="w-8 h-8 text-white" />
             </div>
             <h1 className="text-2xl font-bold text-gray-900">Recuperar Senha</h1>
             <p className="text-sm text-gray-600 mt-2 text-center">

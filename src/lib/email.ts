@@ -29,7 +29,7 @@ export async function sendEmail({ to, subject, html }: SendEmailOptions) {
     });
 
     const mailOptions = {
-      from: `"agendou" <${process.env.SMTP_USER}>`,
+      from: `"paladar" <${process.env.SMTP_USER}>`,
       to,
       subject,
       html,
@@ -74,9 +74,9 @@ export async function sendVerificationEmail(email: string, token: string) {
   const verificationUrl = `${process.env.URL_PROD || "http://localhost:3000"}/auth/verify-email?token=${token}`;
 
   const mailOptions = {
-    from: `"agendou" <${process.env.SMTP_USER}>`,
+    from: `"paladar" <${process.env.SMTP_USER}>`,
     to: email,
-    subject: "Confirme seu e-mail - agendou",
+    subject: "Confirme seu e-mail - paladar",
     html: `
       <!DOCTYPE html>
       <html>
@@ -92,7 +92,7 @@ export async function sendVerificationEmail(email: string, token: string) {
                   <!-- Header -->
                   <tr>
                     <td style="background: linear-gradient(135deg, #374151 0%, #4B5563 100%); padding: 40px 20px; text-align: center;">
-                      <h1 style="margin: 0; color: #ffffff; font-size: 28px;">agendou</h1>
+                      <h1 style="margin: 0; color: #ffffff; font-size: 28px;">paladar</h1>
                       <p style="margin: 10px 0 0 0; color: #ffffff; font-size: 16px;">Confirmação de conta</p>
                     </td>
                   </tr>
@@ -102,7 +102,7 @@ export async function sendVerificationEmail(email: string, token: string) {
                     <td style="padding: 40px 30px;">
                       <h2 style="margin: 0 0 20px 0; color: #333333; font-size: 24px;">Confirme seu Email</h2>
                       <p style="margin: 0 0 20px 0; color: #666666; font-size: 16px; line-height: 1.6;">
-                        Obrigado por se cadastrar na agendou! Para começar a usar o produto,
+                        Obrigado por se cadastrar na paladar! Para começar a usar o produto,
                         precisamos confirmar seu endereço de email.
                       </p>
                       <p style="margin: 0 0 30px 0; color: #666666; font-size: 16px; line-height: 1.6;">
@@ -123,7 +123,7 @@ export async function sendVerificationEmail(email: string, token: string) {
                       </table>
                       
                       <p style="margin: 30px 0 0 0; color: #999999; font-size: 14px; line-height: 1.6;">
-                        Se você não criou uma conta na agendou, pode ignorar este email.
+                        Se você não criou uma conta na paladar, pode ignorar este email.
                       </p>
                       
                       <p style="margin: 20px 0 0 0; color: #999999; font-size: 12px; line-height: 1.6;">
@@ -137,10 +137,10 @@ export async function sendVerificationEmail(email: string, token: string) {
                   <tr>
                     <td style="background-color: #f8f8f8; padding: 30px; text-align: center; border-top: 1px solid #eeeeee;">
                       <p style="margin: 0; color: #999999; font-size: 14px;">
-                        © ${new Date().getFullYear()} agendou. Todos os direitos reservados.
+                        © ${new Date().getFullYear()} paladar. Todos os direitos reservados.
                       </p>
                       <p style="margin: 10px 0 0 0; color: #999999; font-size: 12px;">
-                        Plataforma agendou
+                        Plataforma paladar
                       </p>
                     </td>
                   </tr>

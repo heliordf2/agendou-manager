@@ -1,6 +1,6 @@
 "use client";
 
-import { CalendarDays } from "lucide-react";
+import { ChefHat } from "lucide-react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
@@ -19,10 +19,10 @@ export default function AppShellHeader() {
     <header className="sticky top-0 z-50 border-b border-[#d8d6d3] bg-[#f1efef]/95 backdrop-blur">
       <div className="mx-auto flex w-full max-w-[1880px] items-center justify-between gap-2 px-3 py-3 md:gap-3 md:px-6 md:py-3.5">
         <Link href="/" className="flex items-center gap-2.5 md:gap-3">
-          <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#313845] text-white shadow-[0_6px_14px_rgba(24,30,42,0.22)] md:h-11 md:w-11">
-            <CalendarDays className="h-5 w-5 md:h-6 md:w-6" />
+            <span className="flex h-10 w-10 items-center justify-center rounded-full bg-[#4ade80] text-white shadow-[0_6px_14px_rgba(22,163,74,0.30)] md:h-11 md:w-11">
+            <ChefHat className="h-5 w-5 md:h-6 md:w-6" />
           </span>
-          <span className="text-xl font-bold text-[#2d3440] sm:text-2xl">Agendou</span>
+          <span className="text-xl font-bold text-[#2d3440] sm:text-2xl">Paladar</span>
         </Link>
 
         <nav className="flex flex-wrap items-center justify-end gap-1.5 sm:gap-2 md:gap-2.5">
