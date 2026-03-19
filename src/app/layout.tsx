@@ -8,7 +8,7 @@ import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
   title: "Agendou-manager",
-  description: "Descubra sabores únicos com Agendou - sua plataforma gastronômica inteligente",
+  description: "Gestão de agendamento para o salão de beleza Agendou",
   icons: {
     icon: "/icon.svg",
     shortcut: "/icon.svg",
