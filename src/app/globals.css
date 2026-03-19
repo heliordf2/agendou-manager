@@ -1,0 +1,200 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "~@uploadthing/react/styles.css";
+
+@layer components {
+  .background-page {
+    @apply bg-[#fff8eb];
+  }
+
+  .cor-primaria {
+    @apply bg-black text-white;
+  }
+
+  .icon-chef {
+    @apply inline w-8 h-8 md:w-9 md:h-9 m-1 p-2 rounded-full text-white bg-[#374151];
+  }
+
+  /* Hierarquia de texto */
+  .section-title {
+    @apply text-2xl md:text-3xl font-bold text-foreground mb-4;
+  }
+
+  .subsection-title {
+    @apply text-xl md:text-2xl font-semibold text-foreground mb-3;
+  }
+
+  .card-title {
+    @apply text-lg md:text-xl font-semibold text-foreground;
+  }
+
+  .body-text {
+    @apply text-sm md:text-base text-muted-foreground leading-relaxed;
+  }
+
+  .small-text {
+    @apply text-xs md:text-sm text-muted-foreground;
+  }
+
+  /* Melhor contraste */
+  .text-muted {
+    @apply text-muted-foreground;
+    opacity: 0.75;
+  }
+}
+
+@layer base {
+  :root {
+    --background: 40 20% 98%;
+    --foreground: 20 10% 15%;
+    --card: 0 0% 100%;
+    --card-foreground: 20 10% 15%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 20 10% 15%;
+    --primary: 220 13% 18%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 39 100% 96%;
+    --secondary-foreground: 220 13% 18%;
+    --muted: 40 20% 95%;
+    --muted-foreground: 20 5% 45%;
+    --accent: 220 13% 18%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 40 15% 88%;
+    --input: 40 15% 90%;
+    --ring: 220 13% 18%;
+    --radius: .75rem;
+    --chef-orange: 220 13% 18%;
+    --chef-red: 220 13% 18%;
+    --chef-warm: 39 100% 96%;
+    --chef-dark: 20 10% 15%;
+    --gradient-primary: linear-gradient(135deg, hsl(220 13% 18%) 0%, hsl(220 13% 28%) 100%);
+    --gradient-warm: linear-gradient(180deg, hsl(39 100% 96%) 0%, hsl(40 20% 98%) 100%);
+    --shadow-dish: 0 8px 24px -4px hsl(220 13% 18% / .15);
+    --shadow-elevated: 0 12px 40px -8px hsl(20 10% 15% / .1);
+    --chart-1: 12 76% 61%;
+    --chart-2: 173 58% 39%;
+    --chart-3: 197 37% 24%;
+    --chart-4: 43 74% 66%;
+    --chart-5: 27 87% 67%;
+  }
+
+  .dark {
+    --background: 20 15% 8%;
+    --foreground: 40 20% 95%;
+    --card: 20 12% 12%;
+    --card-foreground: 40 20% 95%;
+    --popover: 20 12% 12%;
+    --popover-foreground: 40 20% 95%;
+    --primary: 220 13% 18%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 20 15% 18%;
+    --secondary-foreground: 40 20% 95%;
+    --muted: 20 12% 15%;
+    --muted-foreground: 40 10% 60%;
+    --accent: 220 13% 18%;
+    --accent-foreground: 0 0% 100%;
+    --destructive: 0 84% 60%;
+    --destructive-foreground: 0 0% 100%;
+    --border: 20 12% 20%;
+    --input: 20 12% 18%;
+    --ring: 220 13% 18%;
+    --chef-orange: 220 13% 18%;
+    --chef-red: 220 13% 18%;
+    --chef-warm: 20 15% 18%;
+    --chef-dark: 40 20% 95%;
+    --gradient-primary: linear-gradient(135deg, hsl(220 13% 18%) 0%, hsl(220 13% 28%) 100%);
+    --gradient-warm: linear-gradient(180deg, hsl(20 12% 12%) 0%, hsl(20 15% 8%) 100%);
+    --shadow-dish: 0 8px 24px -4px hsl(220 13% 18% / .25);
+    --shadow-elevated: 0 12px 40px -8px hsl(0 0% 0% / .3);
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground h-full;
+  }
+
+  /* Touch targets mínimos */
+  button, a {
+    @apply min-h-[44px] min-w-[44px] sm:min-h-[40px] sm:min-w-[40px];
+  }
+
+  /* Foco mais visível */
+  *:focus-visible {
+    @apply outline-none ring-2 ring-primary ring-offset-2;
+  }
+
+  html {
+    @apply h-full;
+  }
+}
+.sonner-container {
+  position: fixed !important;
+  inset: 0 !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  pointer-events: none;
+  z-index: 9999;
+  background-color: transparent; /* fundo do container transparente */
+}
+.sonner-container > * {
+  pointer-events: auto;
+  color: #ffffff !important; /* texto branco */
+  border-radius: 0.5rem !important;
+  padding: 0.75rem 1rem !important;
+  box-shadow: 0 10px 30px rgba(189, 23, 23, 0.15) !important;
+}
+
+@keyframes blink {
+  0%, 20% { opacity: 1; }
+  21%, 40% { opacity: 0.99; }
+  41%, 60% { opacity: 0.98; }
+  61%, 80% { opacity: 0.97; }
+  81%, 90% { opacity: 0.96; }
+  91%, 100% { opacity: 0.95; }
+}
+
+.animate-blink {
+  animation: blink 3s infinite ease-in-out;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes rainbow {
+  0% { color: white; }
+  16% { color: rgb(247, 247, 202); }
+  33% { color: rgb(239, 248, 155); }
+  50% { color:rgb(245, 238, 95) }
+  66% { color: rgb(241, 213, 54) }
+  83% { color:  rgb(235, 235, 32)  }
+  100% { color: rgb(234, 200, 4)    }
+
+
+}
+
+.rainbow-icon {
+  animation: rainbow 6s infinite alternate;
+}
+
+.metallic-border {
+  border: 2px solid;
+  border-image: linear-gradient(45deg, steelblue, lightblue, white) 1;
+}
+
+
+

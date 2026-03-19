@@ -1,0 +1,1476 @@
+{
+  "generatedAt": "2026-03-03T14:53:08.804Z",
+  "counts": {
+    "comercio": 3,
+    "menuCategory": 9,
+    "product": 16,
+    "profissional": 6,
+    "agendaProfissional": 30,
+    "profissionalProduct": 18,
+    "order": 9,
+    "orderProduct": 9,
+    "user": 3,
+    "businessHours": 21,
+    "blockedTimeSlot": 0,
+    "bloqueoProfissional": 0
+  },
+  "comercios": [
+    {
+      "id": "b01d3a75-68c5-435d-b16e-b87911b481b1",
+      "name": "BarbeShop",
+      "slug": "barbeshop",
+      "description": "Barbearia especializada em cortes modernos, barba e cuidado masculino.",
+      "avatarImageUrl": "https://utfs.io/f/kdhTjTSjrX3ijSHZ35qLgU95NWrvzYZAtladuOoiQEwHe2bP",
+      "coverImageUrl": "https://utfs.io/f/kdhTjTSjrX3i1MhJ6wXbCvqJ4ZtTIfnGMXrYkUR0p8u2DAow",
+      "phone": "(11) 97564-0573",
+      "ativo": true,
+      "plan": "PRO",
+      "createdAt": "2026-03-03T13:08:55.769Z",
+      "updateAt": "2026-03-03T13:18:13.306Z",
+      "menuCategory": [
+        {
+          "id": "5645270b-8bd2-4e42-a602-7c7fe73d661d",
+          "name": "Cortes",
+          "order": 0,
+          "comercioId": "b01d3a75-68c5-435d-b16e-b87911b481b1",
+          "createdAt": "2026-03-03T13:08:57.363Z",
+          "updateAt": "2026-03-03T13:08:57.363Z",
+          "product": [
+            {
+              "id": "a90ff4f0-4e07-4e04-b82f-6200cce01651",
+              "name": "Corte Clássico",
+              "description": "Corte tradicional com tesoura e máquina.",
+              "price": 55,
+              "imageUrl": "https://utfs.io/f/kdhTjTSjrX3iPaFMSO62GKvny3cMk19TdOlpWr4aLQgAfiN8",
+              "comercioId": "b01d3a75-68c5-435d-b16e-b87911b481b1",
+              "menuCategoryId": "5645270b-8bd2-4e42-a602-7c7fe73d661d",
+              "createdAt": "2026-03-03T13:08:57.652Z",
+              "updateAt": "2026-03-03T13:30:38.723Z"
+            },
+            {
+              "id": "d789fef5-ddb8-4a1c-966b-72a749b0f179",
+              "name": "Corte Fade",
+              "description": "Degradê moderno com acabamento preciso.",
+              "price": 75,
+              "imageUrl": "https://utfs.io/f/kdhTjTSjrX3iM7yZHcv1UVNnC5oZ967E3DIdTyFbLmfhWxq4",
+              "comercioId": "b01d3a75-68c5-435d-b16e-b87911b481b1",
+              "menuCategoryId": "5645270b-8bd2-4e42-a602-7c7fe73d661d",
+              "createdAt": "2026-03-03T13:08:57.941Z",
+              "updateAt": "2026-03-03T13:30:20.799Z"
+            },
+            {
+              "id": "b7cf7d85-33d2-4829-8e69-0b4ddb093c39",
+              "name": "Corte Social",
+              "description": "Corte executivo para dia a dia.",
+              "price": 65,
+              "imageUrl": "https://utfs.io/f/kdhTjTSjrX3iB1ahcmbgMkjNW50TAR1FezIGaOroyLwf2pmQ",
+              "comercioId": "b01d3a75-68c5-435d-b16e-b87911b481b1",
+              "menuCategoryId": "5645270b-8bd2-4e42-a602-7c7fe73d661d",
+              "createdAt": "2026-03-03T13:08:58.082Z",
+              "updateAt": "2026-03-03T13:30:01.549Z"
+            }
+          ]
+        },
+        {
+          "id": "e1efe094-c59a-463a-8dc2-5ca2e4dcddc5",
+          "name": "Barba",
+          "order": 1,
+          "comercioId": "b01d3a75-68c5-435d-b16e-b87911b481b1",
+          "createdAt": "2026-03-03T13:08:58.225Z",
+          "updateAt": "2026-03-03T13:08:58.225Z",
+          "product": [
+            {
+              "id": "37ba3779-463f-4598-888e-ba781e7b1fff",
+              "name": "Barba Completa",
+              "description": "Aparar, modelar e finalizar com toalha quente.",
+              "price": 50,
+              "imageUrl": "https://utfs.io/f/kdhTjTSjrX3iHF9Gtnwv1shFOQg3VblAMjrn7DLazWY5Cd8u",
+              "comercioId": "b01d3a75-68c5-435d-b16e-b87911b481b1",
+              "menuCategoryId": "e1efe094-c59a-463a-8dc2-5ca2e4dcddc5",
+              "createdAt": "2026-03-03T13:08:58.368Z",
+              "updateAt": "2026-03-03T13:30:57.859Z"
+            },
+            {
+              "id": "7b7812ce-17a9-4821-a759-ee208dfaa3cf",
+              "name": "Barba Express",
+              "description": "Ajuste rápido de contorno e volume.",
+              "price": 35,
+              "imageUrl": "https://utfs.io/f/kdhTjTSjrX3iO9SAx2JTrvxYF9C1WXJUgsQqlBwbGPkyS628",
+              "comercioId": "b01d3a75-68c5-435d-b16e-b87911b481b1",
+              "menuCategoryId": "e1efe094-c59a-463a-8dc2-5ca2e4dcddc5",
+              "createdAt": "2026-03-03T13:08:58.510Z",
+              "updateAt": "2026-03-03T13:27:21.921Z"
+            }
+          ]
+        },
+        {
+          "id": "09406b44-93e6-4ed7-b410-090a1ec3169e",
+          "name": "Combos",
+          "order": 2,
+          "comercioId": "b01d3a75-68c5-435d-b16e-b87911b481b1",
+          "createdAt": "2026-03-03T13:08:58.684Z",
+          "updateAt": "2026-03-03T13:08:58.684Z",
+          "product": [
+            {
+              "id": "61e064db-c7ed-427e-a4f9-dde7ad15ac24",
+              "name": "Combo Corte + Barba",
+              "description": "Pacote completo de visual masculino.",
+              "price": 95,
+              "imageUrl": "https://utfs.io/f/kdhTjTSjrX3iB1XDDI3gMkjNW50TAR1FezIGaOroyLwf2pmQ",
+              "comercioId": "b01d3a75-68c5-435d-b16e-b87911b481b1",
+              "menuCategoryId": "09406b44-93e6-4ed7-b410-090a1ec3169e",
+              "createdAt": "2026-03-03T13:08:58.937Z",
+              "updateAt": "2026-03-03T13:23:03.966Z"
+            }
+          ]
+        }
+      ],
+      "profissionais": [
+        {
+          "id": "c85abe82-e69b-44b6-bf79-3084a2d8771b",
+          "name": "Carlos Silva",
+          "avatarImageUrl": null,
+          "email": "carlos@barbeshop.com",
+          "phone": "(11) 98765-1111",
+          "description": "Especialista em cortes clássicos e atendimento premium.",
+          "isActive": true,
+          "comercioId": "b01d3a75-68c5-435d-b16e-b87911b481b1",
+          "createdAt": "2026-03-03T13:08:59.094Z",
+          "updatedAt": "2026-03-03T13:08:59.094Z",
+          "agendas": [
+            {
+              "id": "cmmamje3q000fvs6o0blcjv4g",
+              "profissionalId": "c85abe82-e69b-44b6-bf79-3084a2d8771b",
+              "dayOfWeek": 1,
+              "startTime": "09:00",
+              "endTime": "18:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:08:59.559Z",
+              "updatedAt": "2026-03-03T13:08:59.559Z",
+              "bloqueios": []
+            },
+            {
+              "id": "cmmamjebt000hvs6oacxfw2mr",
+              "profissionalId": "c85abe82-e69b-44b6-bf79-3084a2d8771b",
+              "dayOfWeek": 2,
+              "startTime": "09:00",
+              "endTime": "18:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:08:59.850Z",
+              "updatedAt": "2026-03-03T13:08:59.850Z",
+              "bloqueios": []
+            },
+            {
+              "id": "cmmamjefr000jvs6o4cf1auat",
+              "profissionalId": "c85abe82-e69b-44b6-bf79-3084a2d8771b",
+              "dayOfWeek": 3,
+              "startTime": "09:00",
+              "endTime": "18:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:08:59.992Z",
+              "updatedAt": "2026-03-03T13:08:59.992Z",
+              "bloqueios": []
+            },
+            {
+              "id": "cmmamjejp000lvs6ozlubwfvv",
+              "profissionalId": "c85abe82-e69b-44b6-bf79-3084a2d8771b",
+              "dayOfWeek": 4,
+              "startTime": "09:00",
+              "endTime": "18:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:09:00.133Z",
+              "updatedAt": "2026-03-03T13:09:00.133Z",
+              "bloqueios": []
+            },
+            {
+              "id": "cmmamjenn000nvs6o5t5a3v6b",
+              "profissionalId": "c85abe82-e69b-44b6-bf79-3084a2d8771b",
+              "dayOfWeek": 5,
+              "startTime": "09:00",
+              "endTime": "18:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:09:00.275Z",
+              "updatedAt": "2026-03-03T13:09:00.275Z",
+              "bloqueios": []
+            }
+          ],
+          "services": [
+            {
+              "id": "35dc881b-405c-4746-a743-ba044683963a",
+              "profissionalId": "c85abe82-e69b-44b6-bf79-3084a2d8771b",
+              "productId": "61e064db-c7ed-427e-a4f9-dde7ad15ac24",
+              "createdAt": "2026-03-03T13:23:04.533Z",
+              "updatedAt": "2026-03-03T13:23:04.533Z"
+            },
+            {
+              "id": "f4dc64b0-8400-49e3-bc8f-f970d392bd60",
+              "profissionalId": "c85abe82-e69b-44b6-bf79-3084a2d8771b",
+              "productId": "b7cf7d85-33d2-4829-8e69-0b4ddb093c39",
+              "createdAt": "2026-03-03T13:30:02.096Z",
+              "updatedAt": "2026-03-03T13:30:02.096Z"
+            },
+            {
+              "id": "89ee0cde-df61-4d17-90c5-857e35de581a",
+              "profissionalId": "c85abe82-e69b-44b6-bf79-3084a2d8771b",
+              "productId": "a90ff4f0-4e07-4e04-b82f-6200cce01651",
+              "createdAt": "2026-03-03T13:30:39.001Z",
+              "updatedAt": "2026-03-03T13:30:39.001Z"
+            }
+          ]
+        },
+        {
+          "id": "3feeb376-17c2-48d1-8de5-19a93f268bcf",
+          "name": "Roberto Santos",
+          "avatarImageUrl": null,
+          "email": "roberto@barbeshop.com",
+          "phone": "(11) 98765-2222",
+          "description": "Especialista em fade, barba e técnicas modernas.",
+          "isActive": true,
+          "comercioId": "b01d3a75-68c5-435d-b16e-b87911b481b1",
+          "createdAt": "2026-03-03T13:09:01.006Z",
+          "updatedAt": "2026-03-03T13:09:01.006Z",
+          "agendas": [
+            {
+              "id": "cmmamjfbv000pvs6o9dj0ei0e",
+              "profissionalId": "3feeb376-17c2-48d1-8de5-19a93f268bcf",
+              "dayOfWeek": 2,
+              "startTime": "10:00",
+              "endTime": "19:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:09:01.148Z",
+              "updatedAt": "2026-03-03T13:09:01.148Z",
+              "bloqueios": []
+            },
+            {
+              "id": "cmmamjfft000rvs6o3jxwzcqh",
+              "profissionalId": "3feeb376-17c2-48d1-8de5-19a93f268bcf",
+              "dayOfWeek": 3,
+              "startTime": "10:00",
+              "endTime": "19:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:09:01.289Z",
+              "updatedAt": "2026-03-03T13:09:01.289Z",
+              "bloqueios": []
+            },
+            {
+              "id": "cmmamjfjv000tvs6oa0ovyqo2",
+              "profissionalId": "3feeb376-17c2-48d1-8de5-19a93f268bcf",
+              "dayOfWeek": 4,
+              "startTime": "10:00",
+              "endTime": "19:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:09:01.436Z",
+              "updatedAt": "2026-03-03T13:09:01.436Z",
+              "bloqueios": []
+            },
+            {
+              "id": "cmmamjfoa000vvs6otcu4ntcp",
+              "profissionalId": "3feeb376-17c2-48d1-8de5-19a93f268bcf",
+              "dayOfWeek": 5,
+              "startTime": "10:00",
+              "endTime": "19:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:09:01.594Z",
+              "updatedAt": "2026-03-03T13:09:01.594Z",
+              "bloqueios": []
+            },
+            {
+              "id": "cmmamjfs8000xvs6odg4dp8bs",
+              "profissionalId": "3feeb376-17c2-48d1-8de5-19a93f268bcf",
+              "dayOfWeek": 6,
+              "startTime": "10:00",
+              "endTime": "19:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:09:01.736Z",
+              "updatedAt": "2026-03-03T13:09:01.736Z",
+              "bloqueios": []
+            }
+          ],
+          "services": [
+            {
+              "id": "c7efbac2-0018-43fc-9444-dbd6102f55ab",
+              "profissionalId": "3feeb376-17c2-48d1-8de5-19a93f268bcf",
+              "productId": "61e064db-c7ed-427e-a4f9-dde7ad15ac24",
+              "createdAt": "2026-03-03T13:23:04.533Z",
+              "updatedAt": "2026-03-03T13:23:04.533Z"
+            },
+            {
+              "id": "085177e1-c03c-4ad5-8174-f04b411bac33",
+              "profissionalId": "3feeb376-17c2-48d1-8de5-19a93f268bcf",
+              "productId": "7b7812ce-17a9-4821-a759-ee208dfaa3cf",
+              "createdAt": "2026-03-03T13:27:22.197Z",
+              "updatedAt": "2026-03-03T13:27:22.197Z"
+            },
+            {
+              "id": "574a38d9-3aa1-444a-bee6-47ae20ca563f",
+              "profissionalId": "3feeb376-17c2-48d1-8de5-19a93f268bcf",
+              "productId": "d789fef5-ddb8-4a1c-966b-72a749b0f179",
+              "createdAt": "2026-03-03T13:30:21.076Z",
+              "updatedAt": "2026-03-03T13:30:21.076Z"
+            },
+            {
+              "id": "9989061c-6ed4-41b6-8cef-dde1ea3f2ac9",
+              "profissionalId": "3feeb376-17c2-48d1-8de5-19a93f268bcf",
+              "productId": "37ba3779-463f-4598-888e-ba781e7b1fff",
+              "createdAt": "2026-03-03T13:30:58.156Z",
+              "updatedAt": "2026-03-03T13:30:58.156Z"
+            }
+          ]
+        }
+      ],
+      "users": [
+        {
+          "id": "61d0dcfb-9cc6-4d97-b4c0-0f68a7ed40ec",
+          "email": "admin@barbeshop.com",
+          "password": "$2a$10$/wz2mpNapIAKspwKN92Hou49F8OdH6Oh56CJlGF.6w70uLqdsBx7K",
+          "name": "Admin BarbeShop",
+          "comercioId": "b01d3a75-68c5-435d-b16e-b87911b481b1",
+          "emailVerified": true,
+          "verificationToken": null,
+          "verificationTokenExpiry": null,
+          "resetToken": null,
+          "resetTokenExpiry": null,
+          "createdAt": "2026-03-03T13:09:03.753Z",
+          "updatedAt": "2026-03-03T13:09:03.753Z"
+        }
+      ],
+      "businessHours": [
+        {
+          "id": "cmmamjbev0001vs6ozf3ygc03",
+          "comercioId": "b01d3a75-68c5-435d-b16e-b87911b481b1",
+          "dayOfWeek": 0,
+          "startTime": "09:00",
+          "endTime": "13:00",
+          "slotDuration": 30,
+          "isActive": true,
+          "createdAt": "2026-03-03T13:08:56.071Z",
+          "updatedAt": "2026-03-03T13:08:56.071Z",
+          "blockedSlots": []
+        },
+        {
+          "id": "cmmamjc5b0005vs6oe2khqgcf",
+          "comercioId": "b01d3a75-68c5-435d-b16e-b87911b481b1",
+          "dayOfWeek": 1,
+          "startTime": "09:00",
+          "endTime": "18:00",
+          "slotDuration": 30,
+          "isActive": true,
+          "createdAt": "2026-03-03T13:08:56.071Z",
+          "updatedAt": "2026-03-03T13:08:56.071Z",
+          "blockedSlots": []
+        },
+        {
+          "id": "cmmamjc66000bvs6oq5wibznu",
+          "comercioId": "b01d3a75-68c5-435d-b16e-b87911b481b1",
+          "dayOfWeek": 2,
+          "startTime": "09:00",
+          "endTime": "18:00",
+          "slotDuration": 30,
+          "isActive": true,
+          "createdAt": "2026-03-03T13:08:56.071Z",
+          "updatedAt": "2026-03-03T13:08:56.071Z",
+          "blockedSlots": []
+        },
+        {
+          "id": "cmmamjc5c0009vs6o08vu5qdn",
+          "comercioId": "b01d3a75-68c5-435d-b16e-b87911b481b1",
+          "dayOfWeek": 3,
+          "startTime": "09:00",
+          "endTime": "18:00",
+          "slotDuration": 30,
+          "isActive": true,
+          "createdAt": "2026-03-03T13:08:56.071Z",
+          "updatedAt": "2026-03-03T13:08:56.071Z",
+          "blockedSlots": []
+        },
+        {
+          "id": "cmmamjc5b0007vs6oj5vg0jwb",
+          "comercioId": "b01d3a75-68c5-435d-b16e-b87911b481b1",
+          "dayOfWeek": 4,
+          "startTime": "09:00",
+          "endTime": "18:00",
+          "slotDuration": 30,
+          "isActive": true,
+          "createdAt": "2026-03-03T13:08:56.071Z",
+          "updatedAt": "2026-03-03T13:08:56.071Z",
+          "blockedSlots": []
+        },
+        {
+          "id": "cmmamjc5a0003vs6osrh1yxka",
+          "comercioId": "b01d3a75-68c5-435d-b16e-b87911b481b1",
+          "dayOfWeek": 5,
+          "startTime": "09:00",
+          "endTime": "18:00",
+          "slotDuration": 30,
+          "isActive": true,
+          "createdAt": "2026-03-03T13:08:56.071Z",
+          "updatedAt": "2026-03-03T13:08:56.071Z",
+          "blockedSlots": []
+        },
+        {
+          "id": "cmmamjc6u000dvs6onnovvz8j",
+          "comercioId": "b01d3a75-68c5-435d-b16e-b87911b481b1",
+          "dayOfWeek": 6,
+          "startTime": "09:00",
+          "endTime": "14:00",
+          "slotDuration": 30,
+          "isActive": true,
+          "createdAt": "2026-03-03T13:08:56.071Z",
+          "updatedAt": "2026-03-03T13:08:56.071Z",
+          "blockedSlots": []
+        }
+      ],
+      "order": [
+        {
+          "id": 28,
+          "total": 55,
+          "status": "PENDING",
+          "comercioId": "b01d3a75-68c5-435d-b16e-b87911b481b1",
+          "profissionalId": "c85abe82-e69b-44b6-bf79-3084a2d8771b",
+          "customerName": "João Pedro",
+          "customerCellPhone": "(11) 99888-7766",
+          "scheduledDate": "2026-03-04",
+          "scheduledTime": "10:00",
+          "createdAt": "2026-03-03T13:09:02.466Z",
+          "updateAt": "2026-03-03T13:09:02.466Z",
+          "orderProducts": [
+            {
+              "id": "004fd8e2-eaa0-4bb2-9f91-8f285fcc0e8f",
+              "productId": "a90ff4f0-4e07-4e04-b82f-6200cce01651",
+              "orderId": 28,
+              "quantity": 1,
+              "price": 55,
+              "createdAt": "2026-03-03T13:09:02.765Z",
+              "updateAt": "2026-03-03T13:09:02.765Z"
+            }
+          ]
+        },
+        {
+          "id": 29,
+          "total": 95,
+          "status": "IN_PREPARANTION",
+          "comercioId": "b01d3a75-68c5-435d-b16e-b87911b481b1",
+          "profissionalId": "3feeb376-17c2-48d1-8de5-19a93f268bcf",
+          "customerName": "Felipe Costa",
+          "customerCellPhone": "(11) 99666-5544",
+          "scheduledDate": "2026-03-05",
+          "scheduledTime": "14:30",
+          "createdAt": "2026-03-03T13:09:03.051Z",
+          "updateAt": "2026-03-03T13:09:03.051Z",
+          "orderProducts": [
+            {
+              "id": "f3789579-af1b-407a-85bd-49a2872b9d9d",
+              "productId": "61e064db-c7ed-427e-a4f9-dde7ad15ac24",
+              "orderId": 29,
+              "quantity": 1,
+              "price": 95,
+              "createdAt": "2026-03-03T13:09:03.193Z",
+              "updateAt": "2026-03-03T13:09:03.193Z"
+            }
+          ]
+        },
+        {
+          "id": 30,
+          "total": 50,
+          "status": "FINISHED",
+          "comercioId": "b01d3a75-68c5-435d-b16e-b87911b481b1",
+          "profissionalId": "3feeb376-17c2-48d1-8de5-19a93f268bcf",
+          "customerName": "Lucas Ferreira",
+          "customerCellPhone": "(11) 99444-3322",
+          "scheduledDate": "2026-03-06",
+          "scheduledTime": "16:00",
+          "createdAt": "2026-03-03T13:09:03.363Z",
+          "updateAt": "2026-03-03T13:09:03.363Z",
+          "orderProducts": [
+            {
+              "id": "743d78c4-0818-4bfc-a26b-efb5f70f05d7",
+              "productId": "37ba3779-463f-4598-888e-ba781e7b1fff",
+              "orderId": 30,
+              "quantity": 1,
+              "price": 50,
+              "createdAt": "2026-03-03T13:09:03.543Z",
+              "updateAt": "2026-03-03T13:09:03.543Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "9cdd8ede-16c2-4f04-93b7-3894bade4d26",
+      "name": "Clinica Odonto",
+      "slug": "clinica-odonto",
+      "description": "Clínica odontológica com foco em prevenção, estética e reabilitação oral.",
+      "avatarImageUrl": "https://utfs.io/f/kdhTjTSjrX3ivrKi2r3Uz1cCYqtgFnMiWvJuVRHpSD8fmE52",
+      "coverImageUrl": "https://utfs.io/f/kdhTjTSjrX3iil2E3NRATcuV9ytv5k86D17rmLBJWPSEXKaj",
+      "phone": "(11) 94567-9988",
+      "ativo": true,
+      "plan": "PLUS",
+      "createdAt": "2026-03-03T13:09:04.051Z",
+      "updateAt": "2026-03-03T13:51:55.973Z",
+      "menuCategory": [
+        {
+          "id": "8c00cae5-f963-44b3-884d-63c16aa6519a",
+          "name": "Prevenção",
+          "order": 0,
+          "comercioId": "9cdd8ede-16c2-4f04-93b7-3894bade4d26",
+          "createdAt": "2026-03-03T13:09:04.482Z",
+          "updateAt": "2026-03-03T13:09:04.482Z",
+          "product": [
+            {
+              "id": "24968a7a-7fc4-4187-8275-6ad7a53aa15d",
+              "name": "Consulta Odontológica",
+              "description": "Avaliação clínica e plano de tratamento.",
+              "price": 120,
+              "imageUrl": "https://utfs.io/f/kdhTjTSjrX3ixHCfjMBYDPHWoetgJyhF7AEUZVQMCBvXwKdj",
+              "comercioId": "9cdd8ede-16c2-4f04-93b7-3894bade4d26",
+              "menuCategoryId": "8c00cae5-f963-44b3-884d-63c16aa6519a",
+              "createdAt": "2026-03-03T13:09:04.793Z",
+              "updateAt": "2026-03-03T13:57:12.221Z"
+            },
+            {
+              "id": "16b6f9ac-790e-45ed-8529-b7843330f624",
+              "name": "Profilaxia",
+              "description": "Limpeza para prevenção de placa e tártaro.",
+              "price": 150,
+              "imageUrl": "https://utfs.io/f/kdhTjTSjrX3i60lvbjiHturFEdjQTiU3G92lzcSN5L6bW1pM",
+              "comercioId": "9cdd8ede-16c2-4f04-93b7-3894bade4d26",
+              "menuCategoryId": "8c00cae5-f963-44b3-884d-63c16aa6519a",
+              "createdAt": "2026-03-03T13:09:05.074Z",
+              "updateAt": "2026-03-03T14:08:32.764Z"
+            }
+          ]
+        },
+        {
+          "id": "865b5b32-3fd7-47af-8f35-2431944dd1f7",
+          "name": "Estética Dental",
+          "order": 1,
+          "comercioId": "9cdd8ede-16c2-4f04-93b7-3894bade4d26",
+          "createdAt": "2026-03-03T13:09:05.215Z",
+          "updateAt": "2026-03-03T13:09:05.215Z",
+          "product": [
+            {
+              "id": "85ba63db-2513-4167-bdb3-5a06ad4936b9",
+              "name": "Clareamento Dental",
+              "description": "Clareamento supervisionado em consultório.",
+              "price": 650,
+              "imageUrl": "https://utfs.io/f/kdhTjTSjrX3iMz5dJAv1UVNnC5oZ967E3DIdTyFbLmfhWxq4",
+              "comercioId": "9cdd8ede-16c2-4f04-93b7-3894bade4d26",
+              "menuCategoryId": "865b5b32-3fd7-47af-8f35-2431944dd1f7",
+              "createdAt": "2026-03-03T13:09:05.356Z",
+              "updateAt": "2026-03-03T14:11:20.005Z"
+            },
+            {
+              "id": "f02e2aa9-2487-4722-9568-b06ddaad1f1c",
+              "name": "Facetas em Resina",
+              "description": "Correções estéticas e harmonia do sorriso.",
+              "price": 1200,
+              "imageUrl": "https://utfs.io/f/kdhTjTSjrX3ihOGl6CGDQrOoSdi2VaGDCMxkzATublpBew38",
+              "comercioId": "9cdd8ede-16c2-4f04-93b7-3894bade4d26",
+              "menuCategoryId": "865b5b32-3fd7-47af-8f35-2431944dd1f7",
+              "createdAt": "2026-03-03T13:09:05.498Z",
+              "updateAt": "2026-03-03T14:15:00.774Z"
+            }
+          ]
+        },
+        {
+          "id": "7fbf4276-0bad-485e-aed6-8f7f204b113e",
+          "name": "Reabilitação",
+          "order": 2,
+          "comercioId": "9cdd8ede-16c2-4f04-93b7-3894bade4d26",
+          "createdAt": "2026-03-03T13:09:05.643Z",
+          "updateAt": "2026-03-03T13:09:05.643Z",
+          "product": [
+            {
+              "id": "fc32ca33-c154-47bb-975e-ca135f56a824",
+              "name": "Implante Unitário",
+              "description": "Reposição de elemento dental com implante.",
+              "price": 3200,
+              "imageUrl": "https://utfs.io/f/kdhTjTSjrX3iw84N5XIPGDCIJTxUKj7kS5XLH49R8pbOB1zM",
+              "comercioId": "9cdd8ede-16c2-4f04-93b7-3894bade4d26",
+              "menuCategoryId": "7fbf4276-0bad-485e-aed6-8f7f204b113e",
+              "createdAt": "2026-03-03T13:09:05.785Z",
+              "updateAt": "2026-03-03T14:18:53.475Z"
+            }
+          ]
+        }
+      ],
+      "profissionais": [
+        {
+          "id": "a493ef9c-801b-4775-b9aa-7dcf8a9bb954",
+          "name": "Dra. Ana Paula",
+          "avatarImageUrl": null,
+          "email": "ana@clinicaodonto.com",
+          "phone": "(11) 98765-3333",
+          "description": "Ortodontia e odontologia preventiva.",
+          "isActive": true,
+          "comercioId": "9cdd8ede-16c2-4f04-93b7-3894bade4d26",
+          "createdAt": "2026-03-03T13:09:05.927Z",
+          "updatedAt": "2026-03-03T13:09:05.927Z",
+          "agendas": [
+            {
+              "id": "cmmamjj8g001dvs6ouihef55v",
+              "profissionalId": "a493ef9c-801b-4775-b9aa-7dcf8a9bb954",
+              "dayOfWeek": 1,
+              "startTime": "08:00",
+              "endTime": "17:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:09:06.208Z",
+              "updatedAt": "2026-03-03T13:09:06.208Z",
+              "bloqueios": []
+            },
+            {
+              "id": "cmmamjjgm001fvs6o9ntiepi4",
+              "profissionalId": "a493ef9c-801b-4775-b9aa-7dcf8a9bb954",
+              "dayOfWeek": 2,
+              "startTime": "08:00",
+              "endTime": "17:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:09:06.503Z",
+              "updatedAt": "2026-03-03T13:09:06.503Z",
+              "bloqueios": []
+            },
+            {
+              "id": "cmmamjjkk001hvs6okobt0jya",
+              "profissionalId": "a493ef9c-801b-4775-b9aa-7dcf8a9bb954",
+              "dayOfWeek": 3,
+              "startTime": "08:00",
+              "endTime": "17:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:09:06.644Z",
+              "updatedAt": "2026-03-03T13:09:06.644Z",
+              "bloqueios": []
+            },
+            {
+              "id": "cmmamjjoi001jvs6os19fg5ct",
+              "profissionalId": "a493ef9c-801b-4775-b9aa-7dcf8a9bb954",
+              "dayOfWeek": 4,
+              "startTime": "08:00",
+              "endTime": "17:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:09:06.786Z",
+              "updatedAt": "2026-03-03T13:09:06.786Z",
+              "bloqueios": []
+            },
+            {
+              "id": "cmmamjjsn001lvs6obdkq7u0f",
+              "profissionalId": "a493ef9c-801b-4775-b9aa-7dcf8a9bb954",
+              "dayOfWeek": 5,
+              "startTime": "08:00",
+              "endTime": "17:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:09:06.936Z",
+              "updatedAt": "2026-03-03T13:09:06.936Z",
+              "bloqueios": []
+            }
+          ],
+          "services": [
+            {
+              "id": "68314203-1fa5-411d-a2cd-5d027b3b0f8c",
+              "profissionalId": "a493ef9c-801b-4775-b9aa-7dcf8a9bb954",
+              "productId": "24968a7a-7fc4-4187-8275-6ad7a53aa15d",
+              "createdAt": "2026-03-03T13:57:12.762Z",
+              "updatedAt": "2026-03-03T13:57:12.762Z"
+            },
+            {
+              "id": "93b47b35-82a7-4088-8bbf-b220214bef8c",
+              "profissionalId": "a493ef9c-801b-4775-b9aa-7dcf8a9bb954",
+              "productId": "16b6f9ac-790e-45ed-8529-b7843330f624",
+              "createdAt": "2026-03-03T14:08:33.328Z",
+              "updatedAt": "2026-03-03T14:08:33.328Z"
+            },
+            {
+              "id": "e71526ac-a0be-41d4-b67a-5dbb66e8d10e",
+              "profissionalId": "a493ef9c-801b-4775-b9aa-7dcf8a9bb954",
+              "productId": "85ba63db-2513-4167-bdb3-5a06ad4936b9",
+              "createdAt": "2026-03-03T14:11:20.310Z",
+              "updatedAt": "2026-03-03T14:11:20.310Z"
+            }
+          ]
+        },
+        {
+          "id": "81537cab-d568-4669-ab92-be3a926d95b7",
+          "name": "Dr. Ricardo Lima",
+          "avatarImageUrl": null,
+          "email": "ricardo@clinicaodonto.com",
+          "phone": "(11) 98765-4444",
+          "description": "Implantodontia e reabilitação oral.",
+          "isActive": true,
+          "comercioId": "9cdd8ede-16c2-4f04-93b7-3894bade4d26",
+          "createdAt": "2026-03-03T13:09:07.792Z",
+          "updatedAt": "2026-03-03T13:09:07.792Z",
+          "agendas": [
+            {
+              "id": "cmmamjkky001nvs6omoejn9cy",
+              "profissionalId": "81537cab-d568-4669-ab92-be3a926d95b7",
+              "dayOfWeek": 2,
+              "startTime": "09:00",
+              "endTime": "18:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:09:07.955Z",
+              "updatedAt": "2026-03-03T13:09:07.955Z",
+              "bloqueios": []
+            },
+            {
+              "id": "cmmamjkp3001pvs6oc22e9a15",
+              "profissionalId": "81537cab-d568-4669-ab92-be3a926d95b7",
+              "dayOfWeek": 3,
+              "startTime": "09:00",
+              "endTime": "18:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:09:08.104Z",
+              "updatedAt": "2026-03-03T13:09:08.104Z",
+              "bloqueios": []
+            },
+            {
+              "id": "cmmamjkt3001rvs6obeqipjkt",
+              "profissionalId": "81537cab-d568-4669-ab92-be3a926d95b7",
+              "dayOfWeek": 4,
+              "startTime": "09:00",
+              "endTime": "18:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:09:08.247Z",
+              "updatedAt": "2026-03-03T13:09:08.247Z",
+              "bloqueios": []
+            },
+            {
+              "id": "cmmamjkx0001tvs6omqv9f0k1",
+              "profissionalId": "81537cab-d568-4669-ab92-be3a926d95b7",
+              "dayOfWeek": 5,
+              "startTime": "09:00",
+              "endTime": "18:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:09:08.389Z",
+              "updatedAt": "2026-03-03T13:09:08.389Z",
+              "bloqueios": []
+            },
+            {
+              "id": "cmmamjl0y001vvs6okh9n6xcs",
+              "profissionalId": "81537cab-d568-4669-ab92-be3a926d95b7",
+              "dayOfWeek": 6,
+              "startTime": "09:00",
+              "endTime": "18:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:09:08.531Z",
+              "updatedAt": "2026-03-03T13:09:08.531Z",
+              "bloqueios": []
+            }
+          ],
+          "services": [
+            {
+              "id": "54d10e91-ab35-475f-87f6-dc991ac2e7f9",
+              "profissionalId": "81537cab-d568-4669-ab92-be3a926d95b7",
+              "productId": "24968a7a-7fc4-4187-8275-6ad7a53aa15d",
+              "createdAt": "2026-03-03T13:57:12.762Z",
+              "updatedAt": "2026-03-03T13:57:12.762Z"
+            },
+            {
+              "id": "db4f09ba-864b-4127-8167-88398fb9e583",
+              "profissionalId": "81537cab-d568-4669-ab92-be3a926d95b7",
+              "productId": "f02e2aa9-2487-4722-9568-b06ddaad1f1c",
+              "createdAt": "2026-03-03T14:15:01.339Z",
+              "updatedAt": "2026-03-03T14:15:01.339Z"
+            },
+            {
+              "id": "104d686e-e661-4597-9a59-b4a8132a2488",
+              "profissionalId": "81537cab-d568-4669-ab92-be3a926d95b7",
+              "productId": "fc32ca33-c154-47bb-975e-ca135f56a824",
+              "createdAt": "2026-03-03T14:18:53.760Z",
+              "updatedAt": "2026-03-03T14:18:53.760Z"
+            }
+          ]
+        }
+      ],
+      "users": [
+        {
+          "id": "cd3546b4-5a8c-4dbe-875a-6c5c900950f2",
+          "email": "admin@clinicaodonto.com",
+          "password": "$2a$10$KUvCuMpqyy8PtGvpNn21v.yHjuf3tnmxxg6Pm.lA7CcklSSxD5RUW",
+          "name": "Admin Clinica Odonto",
+          "comercioId": "9cdd8ede-16c2-4f04-93b7-3894bade4d26",
+          "emailVerified": true,
+          "verificationToken": null,
+          "verificationTokenExpiry": null,
+          "resetToken": null,
+          "resetTokenExpiry": null,
+          "createdAt": "2026-03-03T13:09:10.398Z",
+          "updatedAt": "2026-03-03T13:09:10.398Z"
+        }
+      ],
+      "businessHours": [
+        {
+          "id": "cmmamjhsf0014vs6oauxvl1jv",
+          "comercioId": "9cdd8ede-16c2-4f04-93b7-3894bade4d26",
+          "dayOfWeek": 0,
+          "startTime": "09:00",
+          "endTime": "13:00",
+          "slotDuration": 30,
+          "isActive": true,
+          "createdAt": "2026-03-03T13:09:04.335Z",
+          "updatedAt": "2026-03-03T13:09:04.335Z",
+          "blockedSlots": []
+        },
+        {
+          "id": "cmmamjhse0011vs6o5c3agacf",
+          "comercioId": "9cdd8ede-16c2-4f04-93b7-3894bade4d26",
+          "dayOfWeek": 1,
+          "startTime": "09:00",
+          "endTime": "18:00",
+          "slotDuration": 30,
+          "isActive": true,
+          "createdAt": "2026-03-03T13:09:04.335Z",
+          "updatedAt": "2026-03-03T13:09:04.335Z",
+          "blockedSlots": []
+        },
+        {
+          "id": "cmmamjhse0013vs6o11h9nb23",
+          "comercioId": "9cdd8ede-16c2-4f04-93b7-3894bade4d26",
+          "dayOfWeek": 2,
+          "startTime": "09:00",
+          "endTime": "18:00",
+          "slotDuration": 30,
+          "isActive": true,
+          "createdAt": "2026-03-03T13:09:04.335Z",
+          "updatedAt": "2026-03-03T13:09:04.335Z",
+          "blockedSlots": []
+        },
+        {
+          "id": "cmmamjhsf0015vs6otq60c9ve",
+          "comercioId": "9cdd8ede-16c2-4f04-93b7-3894bade4d26",
+          "dayOfWeek": 3,
+          "startTime": "09:00",
+          "endTime": "18:00",
+          "slotDuration": 30,
+          "isActive": true,
+          "createdAt": "2026-03-03T13:09:04.335Z",
+          "updatedAt": "2026-03-03T13:09:04.335Z",
+          "blockedSlots": []
+        },
+        {
+          "id": "cmmamjhsf0017vs6ogqhpb0ph",
+          "comercioId": "9cdd8ede-16c2-4f04-93b7-3894bade4d26",
+          "dayOfWeek": 4,
+          "startTime": "09:00",
+          "endTime": "18:00",
+          "slotDuration": 30,
+          "isActive": true,
+          "createdAt": "2026-03-03T13:09:04.335Z",
+          "updatedAt": "2026-03-03T13:09:04.335Z",
+          "blockedSlots": []
+        },
+        {
+          "id": "cmmamjhsf0019vs6ojv1duk0v",
+          "comercioId": "9cdd8ede-16c2-4f04-93b7-3894bade4d26",
+          "dayOfWeek": 5,
+          "startTime": "09:00",
+          "endTime": "18:00",
+          "slotDuration": 30,
+          "isActive": true,
+          "createdAt": "2026-03-03T13:09:04.336Z",
+          "updatedAt": "2026-03-03T13:09:04.336Z",
+          "blockedSlots": []
+        },
+        {
+          "id": "cmmamjhsf001bvs6oewvecdzj",
+          "comercioId": "9cdd8ede-16c2-4f04-93b7-3894bade4d26",
+          "dayOfWeek": 6,
+          "startTime": "09:00",
+          "endTime": "14:00",
+          "slotDuration": 30,
+          "isActive": true,
+          "createdAt": "2026-03-03T13:09:04.336Z",
+          "updatedAt": "2026-03-03T13:09:04.336Z",
+          "blockedSlots": []
+        }
+      ],
+      "order": [
+        {
+          "id": 31,
+          "total": 120,
+          "status": "PENDING",
+          "comercioId": "9cdd8ede-16c2-4f04-93b7-3894bade4d26",
+          "profissionalId": "a493ef9c-801b-4775-b9aa-7dcf8a9bb954",
+          "customerName": "Mariana Souza",
+          "customerCellPhone": "(11) 99555-8899",
+          "scheduledDate": "2026-03-04",
+          "scheduledTime": "09:00",
+          "createdAt": "2026-03-03T13:09:09.122Z",
+          "updateAt": "2026-03-03T13:09:09.122Z",
+          "orderProducts": [
+            {
+              "id": "2d3af600-78b9-4073-bd56-aec4f20d99f2",
+              "productId": "24968a7a-7fc4-4187-8275-6ad7a53aa15d",
+              "orderId": 31,
+              "quantity": 1,
+              "price": 120,
+              "createdAt": "2026-03-03T13:09:09.422Z",
+              "updateAt": "2026-03-03T13:09:09.422Z"
+            }
+          ]
+        },
+        {
+          "id": 32,
+          "total": 650,
+          "status": "FINISHED",
+          "comercioId": "9cdd8ede-16c2-4f04-93b7-3894bade4d26",
+          "profissionalId": "a493ef9c-801b-4775-b9aa-7dcf8a9bb954",
+          "customerName": "Rafael Oliveira",
+          "customerCellPhone": "(11) 99333-2222",
+          "scheduledDate": "2026-03-05",
+          "scheduledTime": "11:30",
+          "createdAt": "2026-03-03T13:09:09.771Z",
+          "updateAt": "2026-03-03T13:09:09.771Z",
+          "orderProducts": [
+            {
+              "id": "73e6a9b3-35ed-4905-acbb-1c035929f9e7",
+              "productId": "85ba63db-2513-4167-bdb3-5a06ad4936b9",
+              "orderId": 32,
+              "quantity": 1,
+              "price": 650,
+              "createdAt": "2026-03-03T13:09:09.914Z",
+              "updateAt": "2026-03-03T13:09:09.914Z"
+            }
+          ]
+        },
+        {
+          "id": 33,
+          "total": 3200,
+          "status": "IN_PREPARANTION",
+          "comercioId": "9cdd8ede-16c2-4f04-93b7-3894bade4d26",
+          "profissionalId": "81537cab-d568-4669-ab92-be3a926d95b7",
+          "customerName": "Patrícia Mendes",
+          "customerCellPhone": "(11) 99222-1111",
+          "scheduledDate": "2026-03-07",
+          "scheduledTime": "15:00",
+          "createdAt": "2026-03-03T13:09:10.055Z",
+          "updateAt": "2026-03-03T13:09:10.055Z",
+          "orderProducts": [
+            {
+              "id": "60eb365d-49e6-4586-a58c-76bfacbd7296",
+              "productId": "fc32ca33-c154-47bb-975e-ca135f56a824",
+              "orderId": 33,
+              "quantity": 1,
+              "price": 3200,
+              "createdAt": "2026-03-03T13:09:10.197Z",
+              "updateAt": "2026-03-03T13:09:10.197Z"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "a4720321-2d91-476b-a4f1-40c88c09d993",
+      "name": "Estética Bella",
+      "slug": "estetica-bella",
+      "description": "Clínica estética com protocolos faciais, corporais e harmonização.",
+      "avatarImageUrl": "https://utfs.io/f/kdhTjTSjrX3iB15kkMIgMkjNW50TAR1FezIGaOroyLwf2pmQ",
+      "coverImageUrl": "https://utfs.io/f/kdhTjTSjrX3ir6ypws4FVRCugIt6WfnLkOTvawyKrNq0QjP2",
+      "phone": "(11) 93456-7821",
+      "ativo": true,
+      "plan": "PLUS",
+      "createdAt": "2026-03-03T13:09:10.679Z",
+      "updateAt": "2026-03-03T14:36:51.136Z",
+      "menuCategory": [
+        {
+          "id": "819b1ab9-261b-4ed5-a8f0-275daeb57d28",
+          "name": "Facial",
+          "order": 0,
+          "comercioId": "a4720321-2d91-476b-a4f1-40c88c09d993",
+          "createdAt": "2026-03-03T13:09:10.972Z",
+          "updateAt": "2026-03-03T13:09:10.972Z",
+          "product": [
+            {
+              "id": "eea749aa-5f4b-4e34-90f1-85ed23f82c82",
+              "name": "Limpeza de Pele Premium",
+              "description": "Limpeza profunda com hidratação final.",
+              "price": 180,
+              "imageUrl": "https://utfs.io/f/kdhTjTSjrX3iyI571iMqh6jKtLB2ZDVSJaclYoGbiC4FAO1m",
+              "comercioId": "a4720321-2d91-476b-a4f1-40c88c09d993",
+              "menuCategoryId": "819b1ab9-261b-4ed5-a8f0-275daeb57d28",
+              "createdAt": "2026-03-03T13:09:11.115Z",
+              "updateAt": "2026-03-03T14:39:22.057Z"
+            },
+            {
+              "id": "878ccb3c-2639-42c9-8f00-61f30fb08191",
+              "name": "Peeling Químico",
+              "description": "Renovação celular e melhora de textura.",
+              "price": 240,
+              "imageUrl": "https://utfs.io/f/kdhTjTSjrX3ibqD2jbW6YhgjwiseOS8AXrqup50V3E9vTayn",
+              "comercioId": "a4720321-2d91-476b-a4f1-40c88c09d993",
+              "menuCategoryId": "819b1ab9-261b-4ed5-a8f0-275daeb57d28",
+              "createdAt": "2026-03-03T13:09:11.256Z",
+              "updateAt": "2026-03-03T14:42:25.333Z"
+            }
+          ]
+        },
+        {
+          "id": "90de509e-7a52-4d66-90be-b50c88f91712",
+          "name": "Corporal",
+          "order": 1,
+          "comercioId": "a4720321-2d91-476b-a4f1-40c88c09d993",
+          "createdAt": "2026-03-03T13:09:11.397Z",
+          "updateAt": "2026-03-03T13:09:11.397Z",
+          "product": [
+            {
+              "id": "2ad4469c-8b00-4701-8b9a-f27f7affe781",
+              "name": "Drenagem Linfática",
+              "description": "Redução de retenção e melhora da circulação.",
+              "price": 160,
+              "imageUrl": "https://utfs.io/f/kdhTjTSjrX3iNdU5eh7dmZbvEfUMh2yJiuVs7x4DRQgcAG69",
+              "comercioId": "a4720321-2d91-476b-a4f1-40c88c09d993",
+              "menuCategoryId": "90de509e-7a52-4d66-90be-b50c88f91712",
+              "createdAt": "2026-03-03T13:09:11.541Z",
+              "updateAt": "2026-03-03T14:48:55.304Z"
+            },
+            {
+              "id": "68f68aee-a42e-43dc-a7c5-1091f40dc69a",
+              "name": "Massagem Modeladora",
+              "description": "Técnica para contorno e definição corporal.",
+              "price": 190,
+              "imageUrl": "https://utfs.io/f/kdhTjTSjrX3iOOiUIfJTrvxYF9C1WXJUgsQqlBwbGPkyS628",
+              "comercioId": "a4720321-2d91-476b-a4f1-40c88c09d993",
+              "menuCategoryId": "90de509e-7a52-4d66-90be-b50c88f91712",
+              "createdAt": "2026-03-03T13:09:11.682Z",
+              "updateAt": "2026-03-03T14:44:38.065Z"
+            }
+          ]
+        },
+        {
+          "id": "31a7f1b5-0777-4bc7-9b27-9e9e1d088d10",
+          "name": "Harmonização",
+          "order": 2,
+          "comercioId": "a4720321-2d91-476b-a4f1-40c88c09d993",
+          "createdAt": "2026-03-03T13:09:11.824Z",
+          "updateAt": "2026-03-03T13:09:11.824Z",
+          "product": [
+            {
+              "id": "f692c68f-537c-412c-b32d-a5eb72acdb68",
+              "name": "Preenchimento Labial",
+              "description": "Definição e volume com naturalidade.",
+              "price": 890,
+              "imageUrl": "https://utfs.io/f/kdhTjTSjrX3iy6COszMqh6jKtLB2ZDVSJaclYoGbiC4FAO1m",
+              "comercioId": "a4720321-2d91-476b-a4f1-40c88c09d993",
+              "menuCategoryId": "31a7f1b5-0777-4bc7-9b27-9e9e1d088d10",
+              "createdAt": "2026-03-03T13:09:11.966Z",
+              "updateAt": "2026-03-03T14:50:44.024Z"
+            }
+          ]
+        }
+      ],
+      "profissionais": [
+        {
+          "id": "943e45de-5776-407b-a824-272f1128256c",
+          "name": "Dra. Juliana Reis",
+          "avatarImageUrl": null,
+          "email": "juliana@esteticabella.com",
+          "phone": "(11) 98765-5555",
+          "description": "Especialista em procedimentos faciais e harmonização.",
+          "isActive": true,
+          "comercioId": "a4720321-2d91-476b-a4f1-40c88c09d993",
+          "createdAt": "2026-03-03T13:09:12.109Z",
+          "updatedAt": "2026-03-03T13:09:12.109Z",
+          "agendas": [
+            {
+              "id": "cmmamjo0a002bvs6opk4usqbf",
+              "profissionalId": "943e45de-5776-407b-a824-272f1128256c",
+              "dayOfWeek": 1,
+              "startTime": "09:00",
+              "endTime": "18:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:09:12.394Z",
+              "updatedAt": "2026-03-03T13:09:12.394Z",
+              "bloqueios": []
+            },
+            {
+              "id": "cmmamjo4l002dvs6odfa6asfg",
+              "profissionalId": "943e45de-5776-407b-a824-272f1128256c",
+              "dayOfWeek": 2,
+              "startTime": "09:00",
+              "endTime": "18:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:09:12.549Z",
+              "updatedAt": "2026-03-03T13:09:12.549Z",
+              "bloqueios": []
+            },
+            {
+              "id": "cmmamjo8j002fvs6o1ipy91i2",
+              "profissionalId": "943e45de-5776-407b-a824-272f1128256c",
+              "dayOfWeek": 3,
+              "startTime": "09:00",
+              "endTime": "18:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:09:12.691Z",
+              "updatedAt": "2026-03-03T13:09:12.691Z",
+              "bloqueios": []
+            },
+            {
+              "id": "cmmamjoch002hvs6ooep9xuoe",
+              "profissionalId": "943e45de-5776-407b-a824-272f1128256c",
+              "dayOfWeek": 4,
+              "startTime": "09:00",
+              "endTime": "18:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:09:12.833Z",
+              "updatedAt": "2026-03-03T13:09:12.833Z",
+              "bloqueios": []
+            },
+            {
+              "id": "cmmamjohc002jvs6ozsg0czth",
+              "profissionalId": "943e45de-5776-407b-a824-272f1128256c",
+              "dayOfWeek": 5,
+              "startTime": "09:00",
+              "endTime": "18:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:09:13.008Z",
+              "updatedAt": "2026-03-03T13:09:13.008Z",
+              "bloqueios": []
+            }
+          ],
+          "services": [
+            {
+              "id": "153c08a5-79e6-4896-ab32-ec5267efae9f",
+              "profissionalId": "943e45de-5776-407b-a824-272f1128256c",
+              "productId": "eea749aa-5f4b-4e34-90f1-85ed23f82c82",
+              "createdAt": "2026-03-03T14:39:22.603Z",
+              "updatedAt": "2026-03-03T14:39:22.603Z"
+            },
+            {
+              "id": "70c4f63e-23e0-4dbe-b93a-9b574caa325e",
+              "profissionalId": "943e45de-5776-407b-a824-272f1128256c",
+              "productId": "878ccb3c-2639-42c9-8f00-61f30fb08191",
+              "createdAt": "2026-03-03T14:42:25.877Z",
+              "updatedAt": "2026-03-03T14:42:25.877Z"
+            },
+            {
+              "id": "bda6b096-e741-46d4-9b9c-b88bff1b0240",
+              "profissionalId": "943e45de-5776-407b-a824-272f1128256c",
+              "productId": "f692c68f-537c-412c-b32d-a5eb72acdb68",
+              "createdAt": "2026-03-03T14:50:44.297Z",
+              "updatedAt": "2026-03-03T14:50:44.297Z"
+            }
+          ]
+        },
+        {
+          "id": "7848fc77-7934-4a4c-bfe2-193630de135f",
+          "name": "Camila Rocha",
+          "avatarImageUrl": null,
+          "email": "camila@esteticabella.com",
+          "phone": "(11) 98765-6666",
+          "description": "Foco em protocolos corporais e bem-estar.",
+          "isActive": true,
+          "comercioId": "a4720321-2d91-476b-a4f1-40c88c09d993",
+          "createdAt": "2026-03-03T13:09:13.607Z",
+          "updatedAt": "2026-03-03T13:09:13.607Z",
+          "agendas": [
+            {
+              "id": "cmmamjp1x002lvs6o1d91auf3",
+              "profissionalId": "7848fc77-7934-4a4c-bfe2-193630de135f",
+              "dayOfWeek": 2,
+              "startTime": "10:00",
+              "endTime": "19:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:09:13.749Z",
+              "updatedAt": "2026-03-03T13:09:13.749Z",
+              "bloqueios": []
+            },
+            {
+              "id": "cmmamjp5u002nvs6olmz3fpa0",
+              "profissionalId": "7848fc77-7934-4a4c-bfe2-193630de135f",
+              "dayOfWeek": 3,
+              "startTime": "10:00",
+              "endTime": "19:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:09:13.891Z",
+              "updatedAt": "2026-03-03T13:09:13.891Z",
+              "bloqueios": []
+            },
+            {
+              "id": "cmmamjp9t002pvs6oxev76x60",
+              "profissionalId": "7848fc77-7934-4a4c-bfe2-193630de135f",
+              "dayOfWeek": 4,
+              "startTime": "10:00",
+              "endTime": "19:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:09:14.033Z",
+              "updatedAt": "2026-03-03T13:09:14.033Z",
+              "bloqueios": []
+            },
+            {
+              "id": "cmmamjpds002rvs6omv7x0crk",
+              "profissionalId": "7848fc77-7934-4a4c-bfe2-193630de135f",
+              "dayOfWeek": 5,
+              "startTime": "10:00",
+              "endTime": "19:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:09:14.176Z",
+              "updatedAt": "2026-03-03T13:09:14.176Z",
+              "bloqueios": []
+            },
+            {
+              "id": "cmmamjphs002tvs6ozz140ezj",
+              "profissionalId": "7848fc77-7934-4a4c-bfe2-193630de135f",
+              "dayOfWeek": 6,
+              "startTime": "10:00",
+              "endTime": "19:00",
+              "slotDuration": 30,
+              "isActive": true,
+              "serviceId": null,
+              "createdAt": "2026-03-03T13:09:14.320Z",
+              "updatedAt": "2026-03-03T13:09:14.320Z",
+              "bloqueios": []
+            }
+          ],
+          "services": [
+            {
+              "id": "ee0674cc-f3e9-46e2-abee-6089aef0a215",
+              "profissionalId": "7848fc77-7934-4a4c-bfe2-193630de135f",
+              "productId": "68f68aee-a42e-43dc-a7c5-1091f40dc69a",
+              "createdAt": "2026-03-03T14:44:38.339Z",
+              "updatedAt": "2026-03-03T14:44:38.339Z"
+            },
+            {
+              "id": "a290dff7-bcc4-47d4-a530-bee78d520609",
+              "profissionalId": "7848fc77-7934-4a4c-bfe2-193630de135f",
+              "productId": "2ad4469c-8b00-4701-8b9a-f27f7affe781",
+              "createdAt": "2026-03-03T14:48:55.851Z",
+              "updatedAt": "2026-03-03T14:48:55.851Z"
+            }
+          ]
+        }
+      ],
+      "users": [
+        {
+          "id": "654fb8b2-b90c-4b87-be56-07970ad29515",
+          "email": "admin@esteticabella.com",
+          "password": "$2a$10$mteh1U63EQihCO5dSpfZG./DJg/LmNxOMoTWF0bWS3W8/4ZB.VWZS",
+          "name": "Admin Estética Bella",
+          "comercioId": "a4720321-2d91-476b-a4f1-40c88c09d993",
+          "emailVerified": true,
+          "verificationToken": null,
+          "verificationTokenExpiry": null,
+          "resetToken": null,
+          "resetTokenExpiry": null,
+          "createdAt": "2026-03-03T13:09:15.658Z",
+          "updatedAt": "2026-03-03T13:09:15.658Z"
+        }
+      ],
+      "businessHours": [
+        {
+          "id": "cmmamjmsm001xvs6oqyuc21zz",
+          "comercioId": "a4720321-2d91-476b-a4f1-40c88c09d993",
+          "dayOfWeek": 0,
+          "startTime": "09:00",
+          "endTime": "13:00",
+          "slotDuration": 30,
+          "isActive": true,
+          "createdAt": "2026-03-03T13:09:10.822Z",
+          "updatedAt": "2026-03-03T13:09:10.822Z",
+          "blockedSlots": []
+        },
+        {
+          "id": "cmmamjmsm0021vs6o0ou1030j",
+          "comercioId": "a4720321-2d91-476b-a4f1-40c88c09d993",
+          "dayOfWeek": 1,
+          "startTime": "09:00",
+          "endTime": "18:00",
+          "slotDuration": 30,
+          "isActive": true,
+          "createdAt": "2026-03-03T13:09:10.823Z",
+          "updatedAt": "2026-03-03T13:09:10.823Z",
+          "blockedSlots": []
+        },
+        {
+          "id": "cmmamjmsm0020vs6o0be9e6px",
+          "comercioId": "a4720321-2d91-476b-a4f1-40c88c09d993",
+          "dayOfWeek": 2,
+          "startTime": "09:00",
+          "endTime": "18:00",
+          "slotDuration": 30,
+          "isActive": true,
+          "createdAt": "2026-03-03T13:09:10.823Z",
+          "updatedAt": "2026-03-03T13:09:10.823Z",
+          "blockedSlots": []
+        },
+        {
+          "id": "cmmamjmsm0024vs6oh8pobfi7",
+          "comercioId": "a4720321-2d91-476b-a4f1-40c88c09d993",
+          "dayOfWeek": 3,
+          "startTime": "09:00",
+          "endTime": "18:00",
+          "slotDuration": 30,
+          "isActive": true,
+          "createdAt": "2026-03-03T13:09:10.823Z",
+          "updatedAt": "2026-03-03T13:09:10.823Z",
+          "blockedSlots": []
+        },
+        {
+          "id": "cmmamjmsm0025vs6ocaz4jjy1",
+          "comercioId": "a4720321-2d91-476b-a4f1-40c88c09d993",
+          "dayOfWeek": 4,
+          "startTime": "09:00",
+          "endTime": "18:00",
+          "slotDuration": 30,
+          "isActive": true,
+          "createdAt": "2026-03-03T13:09:10.823Z",
+          "updatedAt": "2026-03-03T13:09:10.823Z",
+          "blockedSlots": []
+        },
+        {
+          "id": "cmmamjmsn0027vs6oscivgrza",
+          "comercioId": "a4720321-2d91-476b-a4f1-40c88c09d993",
+          "dayOfWeek": 5,
+          "startTime": "09:00",
+          "endTime": "18:00",
+          "slotDuration": 30,
+          "isActive": true,
+          "createdAt": "2026-03-03T13:09:10.823Z",
+          "updatedAt": "2026-03-03T13:09:10.823Z",
+          "blockedSlots": []
+        },
+        {
+          "id": "cmmamjmsn0029vs6oxrub30bh",
+          "comercioId": "a4720321-2d91-476b-a4f1-40c88c09d993",
+          "dayOfWeek": 6,
+          "startTime": "09:00",
+          "endTime": "14:00",
+          "slotDuration": 30,
+          "isActive": true,
+          "createdAt": "2026-03-03T13:09:10.823Z",
+          "updatedAt": "2026-03-03T13:09:10.823Z",
+          "blockedSlots": []
+        }
+      ],
+      "order": [
+        {
+          "id": 34,
+          "total": 180,
+          "status": "PENDING",
+          "comercioId": "a4720321-2d91-476b-a4f1-40c88c09d993",
+          "profissionalId": "943e45de-5776-407b-a824-272f1128256c",
+          "customerName": "Beatriz Lima",
+          "customerCellPhone": "(11) 99777-3333",
+          "scheduledDate": "2026-03-04",
+          "scheduledTime": "10:30",
+          "createdAt": "2026-03-03T13:09:14.746Z",
+          "updateAt": "2026-03-03T13:09:14.746Z",
+          "orderProducts": [
+            {
+              "id": "0f755d1a-a7b5-4a9f-a65a-f8bf1d7e539e",
+              "productId": "eea749aa-5f4b-4e34-90f1-85ed23f82c82",
+              "orderId": 34,
+              "quantity": 1,
+              "price": 180,
+              "createdAt": "2026-03-03T13:09:14.892Z",
+              "updateAt": "2026-03-03T13:09:14.892Z"
+            }
+          ]
+        },
+        {
+          "id": 35,
+          "total": 160,
+          "status": "FINISHED",
+          "comercioId": "a4720321-2d91-476b-a4f1-40c88c09d993",
+          "profissionalId": "7848fc77-7934-4a4c-bfe2-193630de135f",
+          "customerName": "Vanessa Prado",
+          "customerCellPhone": "(11) 99666-1212",
+          "scheduledDate": "2026-03-05",
+          "scheduledTime": "13:00",
+          "createdAt": "2026-03-03T13:09:15.035Z",
+          "updateAt": "2026-03-03T13:09:15.035Z",
+          "orderProducts": [
+            {
+              "id": "8ddfdb17-3290-4e46-84de-13def2484489",
+              "productId": "2ad4469c-8b00-4701-8b9a-f27f7affe781",
+              "orderId": 35,
+              "quantity": 1,
+              "price": 160,
+              "createdAt": "2026-03-03T13:09:15.176Z",
+              "updateAt": "2026-03-03T13:09:15.176Z"
+            }
+          ]
+        },
+        {
+          "id": 36,
+          "total": 890,
+          "status": "IN_PREPARANTION",
+          "comercioId": "a4720321-2d91-476b-a4f1-40c88c09d993",
+          "profissionalId": "943e45de-5776-407b-a824-272f1128256c",
+          "customerName": "Isabela Nunes",
+          "customerCellPhone": "(11) 99555-9898",
+          "scheduledDate": "2026-03-06",
+          "scheduledTime": "15:30",
+          "createdAt": "2026-03-03T13:09:15.318Z",
+          "updateAt": "2026-03-03T13:09:15.318Z",
+          "orderProducts": [
+            {
+              "id": "d2628f01-9cc4-49a7-a4d6-ced40c2157e5",
+              "productId": "f692c68f-537c-412c-b32d-a5eb72acdb68",
+              "orderId": 36,
+              "quantity": 1,
+              "price": 890,
+              "createdAt": "2026-03-03T13:09:15.460Z",
+              "updateAt": "2026-03-03T13:09:15.460Z"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

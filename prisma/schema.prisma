@@ -1,0 +1,217 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+// Looking for ways to speed up your queries, or scale easily with your serverless or edge functions?
+// Try Prisma Accelerate: https://pris.ly/cli/accelerate-init
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider  = "postgresql"
+  url       = env("DATABASE_URL")
+  directUrl = env("DATABASE_URL_UNPOOLED")
+}
+
+model Comercio {
+  id             String            @id @default(uuid())
+  name           String
+  slug           String            @unique
+  description    String
+  avatarImageUrl String
+  coverImageUrl  String
+  phone          String            @default("")
+  ativo          Boolean           @default(false)
+  plan           Plan              @default(STARTER)
+  menuCategory   MenuCategory[]
+  product        Product[]
+  order          Order[]
+  users          User[]
+  profissionais  Profissional[]
+  businessHours  BusinessHours[]
+  createdAt      DateTime          @default(now())
+  updateAt       DateTime          @updatedAt
+}
+
+model MenuCategory {
+  id         String    @id @default(uuid())
+  name       String
+  order      Int       @default(0)
+  comercio   Comercio  @relation(fields: [comercioId], references: [id], onDelete: Cascade)
+  comercioId String
+  product    Product[]
+  createdAt  DateTime  @default(now())
+  updateAt   DateTime  @updatedAt
+}
+
+model Product {
+  id             String         @id @default(uuid())
+  name           String
+  description    String
+  price          Float
+  imageUrl       String
+  comercio       Comercio       @relation(fields: [comercioId], references: [id], onDelete: Cascade)
+  comercioId     String
+  menuCategory   MenuCategory   @relation(fields: [menuCategoryId], references: [id], onDelete: Cascade)
+  menuCategoryId String
+  orderProduct   OrderProduct[]
+  profissionalProducts ProfissionalProduct[]
+  agendas         AgendaProfissional[]
+  createdAt      DateTime       @default(now())
+  updateAt       DateTime       @updatedAt
+}
+
+model Profissional {
+  id                String              @id @default(uuid())
+  name              String
+  avatarImageUrl    String?
+  email             String?
+  phone             String?
+  description       String?
+  isActive          Boolean             @default(true)
+  comercio          Comercio            @relation(fields: [comercioId], references: [id], onDelete: Cascade)
+  comercioId        String
+  orders            Order[]
+  agendas           AgendaProfissional[]
+  services          ProfissionalProduct[]
+  createdAt         DateTime            @default(now())
+  updatedAt         DateTime            @updatedAt
+
+  @@index([comercioId])
+}
+
+model AgendaProfissional {
+  id               String                @id @default(cuid())
+  profissional     Profissional          @relation(fields: [profissionalId], references: [id], onDelete: Cascade)
+  profissionalId   String
+  dayOfWeek        Int                   // 0 = Sunday, 1 = Monday, ... 6 = Saturday
+  startTime        String                // Format: "09:00"
+  endTime          String                // Format: "17:00"
+  slotDuration     Int                   @default(30) // Duration in minutes
+  isActive         Boolean               @default(true)
+  bloqueios        BloqueoProfissional[]
+  service          Product?              @relation(fields: [serviceId], references: [id], onDelete: SetNull)
+  serviceId        String?
+  createdAt        DateTime              @default(now())
+  updatedAt        DateTime              @updatedAt
+
+  @@unique([profissionalId, dayOfWeek])
+  @@index([profissionalId])
+}
+
+model ProfissionalProduct {
+  id             String       @id @default(uuid())
+  profissional   Profissional @relation(fields: [profissionalId], references: [id], onDelete: Cascade)
+  profissionalId String
+  product        Product      @relation(fields: [productId], references: [id], onDelete: Cascade)
+  productId      String
+  createdAt      DateTime     @default(now())
+  updatedAt      DateTime     @updatedAt
+
+  @@unique([profissionalId, productId])
+  @@index([profissionalId])
+}
+
+model BloqueoProfissional {
+  id                    String             @id @default(cuid())
+  agenda                AgendaProfissional @relation(fields: [agendaId], references: [id], onDelete: Cascade)
+  agendaId              String
+  startTime             String             // Format: "12:00"
+  endTime               String             // Format: "14:00"
+  motivo                String?            // Motivo do bloqueio
+  createdAt             DateTime           @default(now())
+  updatedAt             DateTime           @updatedAt
+
+  @@unique([agendaId, startTime, endTime])
+}
+
+model Order {
+  id                Int            @id @default(autoincrement())
+  total             Float
+  status            OrderStatus
+  comercio          Comercio       @relation(fields: [comercioId], references: [id], onDelete: Cascade)
+  comercioId        String
+  profissional      Profissional?  @relation(fields: [profissionalId], references: [id], onDelete: SetNull)
+  profissionalId    String?
+  orderProducts     OrderProduct[]
+  customerName      String
+  customerCellPhone String
+  scheduledDate     String?
+  scheduledTime     String?
+  createdAt         DateTime       @default(now())
+  updateAt          DateTime       @updatedAt
+
+  @@index([comercioId])
+  @@index([profissionalId])
+}
+
+model OrderProduct {
+  id        String   @id @default(uuid())
+  product   Product  @relation(fields: [productId], references: [id], onDelete: Cascade)
+  productId String
+  order     Order    @relation(fields: [orderId], references: [id], onDelete: Cascade)
+  orderId   Int
+  quantity  Int
+  price     Float
+  createdAt DateTime @default(now())
+  updateAt  DateTime @updatedAt
+}
+
+model User {
+  id                      String    @id @default(uuid())
+  email                   String    @unique
+  password                String
+  name                    String
+  comercio                Comercio  @relation(fields: [comercioId], references: [id], onDelete: Cascade)
+  comercioId              String
+  emailVerified           Boolean   @default(false)
+  verificationToken       String?   @unique
+  verificationTokenExpiry DateTime?
+  resetToken              String?   @unique
+  resetTokenExpiry        DateTime?
+  createdAt               DateTime  @default(now())
+  updatedAt               DateTime  @updatedAt
+}
+
+model BusinessHours {
+  id            String             @id @default(cuid())
+  comercio      Comercio           @relation(fields: [comercioId], references: [id], onDelete: Cascade)
+  comercioId    String
+  dayOfWeek     Int                // 0 = Sunday, 1 = Monday, ... 6 = Saturday
+  startTime     String             // Format: "09:00"
+  endTime       String             // Format: "17:00"
+  slotDuration  Int                @default(30) // Duration in minutes
+  isActive      Boolean            @default(true)
+  blockedSlots  BlockedTimeSlot[]
+  createdAt     DateTime           @default(now())
+  updatedAt     DateTime           @updatedAt
+
+  @@unique([comercioId, dayOfWeek])
+}
+
+model BlockedTimeSlot {
+  id               String        @id @default(cuid())
+  businessHours    BusinessHours @relation(fields: [businessHoursId], references: [id], onDelete: Cascade)
+  businessHoursId  String
+  startTime        String        // Format: "12:00" - blocked from this time
+  endTime          String        // Format: "14:00" - blocked until this time
+  reason           String?       // Optional reason for blocking (e.g., "Lunch break")
+  createdAt        DateTime      @default(now())
+  updatedAt        DateTime      @updatedAt
+
+  @@unique([businessHoursId, startTime, endTime])
+}
+
+enum OrderStatus {
+  PENDING
+  IN_PREPARANTION
+  FINISHED
+  CANCELADO
+}
+
+enum Plan {
+  STARTER
+  PRO
+  PLUS
+}
