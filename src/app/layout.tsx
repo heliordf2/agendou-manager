@@ -7,7 +7,7 @@ import { CalendarPattern } from "@/components/calendar-pattern";
 import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {
-  title: "Agendou",
+  title: "Agendou-manager",
   description: "Descubra sabores únicos com Agendou - sua plataforma gastronômica inteligente",
   icons: {
     icon: "/icon.svg",
