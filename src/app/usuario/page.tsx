@@ -2,14 +2,14 @@
 
 import { ShieldCheck } from "lucide-react";
 import { useRouter, useSearchParams } from "next/navigation";
-import { useState } from "react";
+import { Suspense, useState } from "react";
 import { toast } from "sonner";
 
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 
-export default function UsuarioPage() {
+function UsuarioPageContent() {
   const router = useRouter();
   const searchParams = useSearchParams();
   const [credential, setCredential] = useState("");
@@ -81,5 +81,13 @@ export default function UsuarioPage() {
         </Card>
       </div>
     </div>
+  );
+}
+
+export default function UsuarioPage() {
+  return (
+    <Suspense fallback={null}>
+      <UsuarioPageContent />
+    </Suspense>
   );
 }

@@ -4,10 +4,10 @@ import {
   Columns3,
   Database,
   Download,
-  Eye,
   ExternalLink,
-  Files,
+  Eye,
   FileJson,
+  Files,
   FileSpreadsheet,
   FileText,
   ImageOff,
@@ -76,7 +76,6 @@ type DeleteImpactResponse = {
 };
 
 type Props = {
-  userName: string;
   panelTitle?: string;
   allowCreate?: boolean;
 };
@@ -237,7 +236,6 @@ function normalizeFormValue(
 }
 
 export default function ManagerDashboard({
-  userName,
   panelTitle = "Painel Database",
   allowCreate = true,
 }: Props) {

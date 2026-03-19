@@ -12,5 +12,5 @@ export default async function DatabasePage() {
     redirect("/usuario?next=/database");
   }
 
-  return <ManagerDashboard userName="Administrador" panelTitle="Painel Database" allowCreate={false} />;
+  return <ManagerDashboard panelTitle="Painel Database" allowCreate={false} />;
 }

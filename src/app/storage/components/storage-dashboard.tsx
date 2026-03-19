@@ -2,12 +2,12 @@
 
 import {
   ArrowUpDown,
-  LayoutGrid,
-  List,
   Copy,
   ExternalLink,
   Files,
   ImageOff,
+  LayoutGrid,
+  List,
   Pencil,
   RefreshCcw,
   Search,
@@ -48,10 +48,6 @@ type StorageFileItem = {
 
 type FilesResponse = {
   files: StorageFileItem[];
-};
-
-type Props = {
-  userName: string;
 };
 
 function formatBytes(bytes: number): string {
@@ -104,7 +100,7 @@ function ImageThumbnail({ src, alt }: { src: string; alt: string }) {
   );
 }
 
-export default function StorageDashboard({ userName: _userName }: Props) {
+export default function StorageDashboard() {
   const [files, setFiles] = useState<StorageFileItem[]>([]);
   const [loading, setLoading] = useState(true);
   const [query, setQuery] = useState("");

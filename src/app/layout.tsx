@@ -2,8 +2,8 @@ import "./globals.css";
 
 import type { Metadata } from "next";
 
-import { CalendarPattern } from "@/components/calendar-pattern";
 import AppShellHeader from "@/components/app-shell-header";
+import { CalendarPattern } from "@/components/calendar-pattern";
 import { Toaster } from "@/components/ui/sonner";
 
 export const metadata: Metadata = {

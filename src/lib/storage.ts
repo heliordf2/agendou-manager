@@ -1,13 +1,11 @@
 import { Prisma } from "@prisma/client";
 import { UTApi } from "uploadthing/server";
 
-import { getUploadthingKeyFromUrl, isRemoteUploadthingUrl } from "@/lib/uploadthing-server";
 import { db } from "@/lib/prisma";
+import { getUploadthingKeyFromUrl } from "@/lib/uploadthing-server";
 
 const IMAGE_FIELD_NAME_REGEX = /(image|imagem|avatar|cover|logo|photo|foto|banner|thumb)/i;
 const utapi = new UTApi();
-
-type DmmfModel = (typeof Prisma.dmmf.datamodel.models)[number];
 
 type StorageFileItem = {
   fileKey: string;

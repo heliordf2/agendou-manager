@@ -12,5 +12,5 @@ export default async function StoragePage() {
     redirect("/usuario?next=/storage");
   }
 
-  return <StorageDashboard userName="Administrador" />;
+  return <StorageDashboard />;
 }
